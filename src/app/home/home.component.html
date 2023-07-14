@@ -1,0 +1,16 @@
+<div class="container entry-form">
+   <div class="row">
+      <div class="col entry-form-col">
+       	<form #myForm="ngForm">
+            <div class="col-xs-6 col-sm-6 col-md-8 field-value-div">
+					<select name="tradepersontype" #tradepersontype="ngModel" ngModel (change)="onTradepersonTypeChange($event)">
+						<option value="">Select Tradesperson Type</option>
+						<option *ngFor="let tradepersontype of tradepersontypes" [value]="tradepersontype.tradepersontypeId">
+							{{ tradepersontype.tradepersonName }}
+						</option>
+					</select>
+          	</div>
+         </form>
+      </div>
+  	</div>
+</div>

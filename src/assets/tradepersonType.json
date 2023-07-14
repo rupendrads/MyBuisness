@@ -1,0 +1,14 @@
+[
+    {
+        "tradepersontypeId" : 1,
+        "tradepersonName" : "Bathroom fitter"        
+    },
+    {
+        "tradepersontypeId" : 2,
+        "tradepersonName" : "BathrBlacksmith/Metal worker"
+    },
+    {
+        "tradepersontypeId" : 3,
+        "tradepersonName" : "Bricklayer"
+    }
+]
