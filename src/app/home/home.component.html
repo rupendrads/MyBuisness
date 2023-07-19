@@ -1,16 +1,33 @@
+<app-header></app-header>
+
+<!-- Form -->
 <div class="container entry-form">
-   <div class="row">
-      <div class="col entry-form-col">
-       	<form #myForm="ngForm">
-            <div class="col-xs-6 col-sm-6 col-md-8 field-value-div">
-					<select name="tradepersontype" #tradepersontype="ngModel" ngModel (change)="onTradepersonTypeChange($event)">
-						<option value="">Select Tradesperson Type</option>
+	<div class="form-row">
+		<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+			<div class="col-md-8 form-group">
+				<label class="row-form-label">What type of tradeperson do you need?</label>
+				
+					<select style="color: #575d63;" class="form-control form-control-sm" placeholder="Please select tradeperson" name="tradepersontype" (ngModelChange)="onTradepersonTypeSelect($event)" [(ngModel)]="selectedTradepersonType" >
+						<option [value]="null" style="color: #575d63;">Select Tradesperson Type</option>
 						<option *ngFor="let tradepersontype of tradepersontypes" [value]="tradepersontype.tradepersontypeId">
 							{{ tradepersontype.tradepersonName }}
 						</option>
 					</select>
-          	</div>
-         </form>
-      </div>
-  	</div>
+			</div>	
+			<div class="col-md-8 form-group">
+				<label class="row-form-label">What type of job is it?</label>
+
+					<select style="color: #575d63;" class="form-control form-control-sm" placeholder="Please select job" *ngIf="selectedTradepersonType" name="jobtype" (ngModelChange)="onJobTypeSelect($event)" [(ngModel)]="selectedJobType" ngModel >
+						<option [value]="null" style="color: #575d63;">Select Job Type</option>
+						<option *ngFor="let jobtype of filteredJob" [value]="jobtype.jobId">
+							{{ jobtype.jobName }}
+						</option>
+					</select>
+
+			</div>
+			<div class="col-md-8 form-group">
+				<button class="btn btn-primary" type="submit" value="Submit"><a [routerLink]="['/post-a-job']" *ngIf="selectedTradepersonType && selectedJobType">Next Step ></a></button>
+			</div>
+		</form>
+	</div>
 </div>

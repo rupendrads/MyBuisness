@@ -1,0 +1,33 @@
+
+button[type="submit"] {
+    width: 150px;
+    height: 45px;
+    background-color: #aebac7;
+    color: #f30808;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #62676b;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .row-form-label {
+    font-size: 0.75rem;
+  }
+
+
+  
+
+  
+  
+      
