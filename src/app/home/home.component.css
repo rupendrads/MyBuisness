@@ -1,29 +1,76 @@
+.home-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-button[type="submit"] {
-    width: 150px;
-    height: 45px;
-    background-color: #aebac7;
-    color: #f30808;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    
-    transition: background-color 0.3s;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #62676b;
-  }
+.title {
+  width: 450px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgb(233, 80, 10);
+  align-items: center;
+}
 
-  a {
-    text-decoration: none;
-  }
+.sub-title {
+  font-size: 20px;
+  color: rgb(233, 80, 10);
+  align-items: center;
+  margin: 20px;
+}
 
-  .row-form-label {
-    font-size: 0.75rem;
-  }
+.row-form-label {
+    font-size: 0.80rem;
+}
+
+form {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.dropdown-container {
+  flex: 1;
+}
+
+select {
+  width: 250px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #575d63;
+}
+
+select > option {
+  color: #575d63;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 
 
   
