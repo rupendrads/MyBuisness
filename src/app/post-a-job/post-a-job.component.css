@@ -1,0 +1,8 @@
+.list-group-item {
+    display: none;
+  }
+  
+  .list-group-item.active {
+    display: block;
+  }
+  

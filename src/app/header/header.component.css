@@ -32,7 +32,7 @@ button:focus,
 }
 
 .menu_wrapper .navbar-nav .nav-item {
-  margin: 0 10px;
+  margin: 0 7px;
 }
 
 .menu_wrapper .navbar-nav .nav-link {
@@ -40,6 +40,12 @@ button:focus,
   font-weight: 400;
   color: rgb(41, 40, 43);
   display: inline-block;
+}
+
+.menu_wrapper .navbar-nav .nav-link:hover {
+  font-size: 16px;
+  font-weight: 600;
+  color: #575d63;
 }
 
 .menu_wrapper .dropdown-menu .dropdown-item {
@@ -52,7 +58,7 @@ button:focus,
 }
 
 .menu_wrapper .dropdown-mega .dropdown-menu {
-  width: 60%;
+  width: 80%;
 }
 
 .dropdown-mega h5 {

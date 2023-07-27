@@ -9,24 +9,24 @@
 <div class="flex-container">
 	<form (ngSubmit)="onSubmit()" #myForm="ngForm">
 		<div class="dropdown-container">
-			<label for="tradepersontype" class="row-form-label">What type of tradeperson do you need?</label>
-				<select class="form-control form-control-sm" placeholder="Please select tradeperson" name="tradepersontype" (ngModelChange)="onTradepersonTypeSelect($event)" [(ngModel)]="selectedTradepersonType" >
+			<label for="tradeperson" class="row-form-label">What type of tradeperson do you need?</label>
+				<select class="form-control form-control-sm" placeholder="Please select tradeperson" name="tradeperson" (ngModelChange)="onTradepersonSelect($event)" ngModel>
 					<option [value]="null">Select Tradesperson Type</option>
-					<option *ngFor="let tradepersontype of tradepersontypes" [value]="tradepersontype.tradepersontypeId">
-						{{ tradepersontype.tradepersonName }}
+					<option *ngFor="let tradeperson of filteredTradeperson" [value]="tradeperson.Id">
+						{{ tradeperson.Title }}
 					</option>
 				</select>
 		</div>	
 		<div class="dropdown-container">
-			<label for="jobtype" class="row-form-label">What type of job is it?</label>
-				<select class="form-control form-control-sm" placeholder="Please select job" *ngIf="selectedTradepersonType" name="jobtype" (ngModelChange)="onJobTypeSelect($event)" [(ngModel)]="selectedJobType" ngModel >
+			<label for="job" class="row-form-label">What type of job is it?</label>
+				<select class="form-control form-control-sm" placeholder="Please select job" [disabled]="selectedTradepersonId == undefined" name="job" (ngModelChange)="onJobSelect($event)" ngModel>
 					<option [value]="null">Select Job Type</option>
-					<option *ngFor="let jobtype of filteredJob" [value]="jobtype.jobId">
-						{{ jobtype.jobName }}
+					<option *ngFor="let job of filteredJob" [value]="job.Id">
+						{{ job.Title }}
 					</option>
 				</select>
 		</div>
-			<button class="btn-submit" [routerLink]="['/post-a-job']" *ngIf="selectedTradepersonType && selectedJobType" type="submit" value="Submit">Next Step ></button>
+			<button class="btn-submit" [disabled]="selectedTradepersonId == undefined || selectedJobId == undefined" type="submit" value="Submit">Next Step ></button>
 	</form>
 </div>
 

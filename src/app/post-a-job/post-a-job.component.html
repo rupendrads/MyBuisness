@@ -1,1 +1,29 @@
-<p>post-a-job works!</p>
+<div class="container mt-4">
+	<div class="mt-3">
+		<h3>rated people</h3>
+		<button class="btn btn-danger" (click)="closeQuiz()">Close</button>
+	</div>
+
+	<div class="progress mt-3 mb-4" style="height: 20px;">
+		<div class="progress-bar" role="progressbar" aria-label="Example 20px high" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	 </div>
+
+	<div class="list-group">
+		<div class="list-group-item" *ngFor="let question of questions; let i = index" [ngClass]="{'active': currentQuestionIndex === i, 'd-none': currentQuestionIndex !== i}">
+			<h5>{{ question.Title }}</h5>
+
+		<div class="form-check">
+			<input class="form-check-input" type="radio">
+			<label class="form-check-label">
+				
+			</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="mt-3">
+      <button class="btn btn-secondary mr-2" [disabled]="currentQuestionIndex === 0" (click)="goToPreviousQuestion()">Back</button>
+      <button class="btn btn-primary mr-2" (click)="goToNextQuestion()" [disabled]="">Next</button>
+      
+    </div>
+</div>
