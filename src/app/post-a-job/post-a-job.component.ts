@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Questions } from './models/questions.model';
 import { Options } from './models/options.model';
-import { QuestionOptions } from './models/questionoptions.model';
-// import { QuestionsService } from './services/questions.service'; 
-// import { OptionsService } from './services/options.service';
 import { ActivatedRoute } from '@angular/router';
+import { QuestionOptionsService } from './services/questionOptions.service';
+import { QuestionsService } from './services/questions.service';
+import { OptionsService } from './services/options.service';
+import { QuestionOptions } from './models/questionoptions.model';
 
 @Component({
   selector: 'app-job',
@@ -14,15 +14,18 @@ import { ActivatedRoute } from '@angular/router';
 export class PostJobComponent implements OnInit{
   selectedTradepersonId: number| undefined;
   selectedJobId: number | undefined;
-  currentQuestionIndex: number = 0;
-  questions: Questions[] = [];
-  filteredQuestion: Questions[] | undefined = undefined; 
-  options: Options[] = [];
-  selectedOption: Options | undefined = undefined;
+  questionIndex: number = 0;
+  questionIds: number[]=[];
+  questionId: number | undefined;
+  questionTitle: string = "";
+  options: Options[] = []; 
+  questionOptions: QuestionOptions[]=[]; 
+  selectedOptionId: number | undefined;
 
-  //private questionsService: QuestionsService
-  //private optionsService: OptionsService
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, 
+    private questionOptionsService: QuestionOptionsService,
+    private questionsService: QuestionsService,
+    private optionsService: OptionsService) {}
 
   ngOnInit() {    
         const tpId = this.route.snapshot.paramMap.get('selectedTradepersonId');
@@ -37,21 +40,104 @@ export class PostJobComponent implements OnInit{
             console.log(this.selectedJobId);
         }
 
-    // this.questionsService.getQuestion().subscribe(data => {
-    //   this.questions = data.questions;
-    // });
+        const startQuestionId = this.route.snapshot.paramMap.get('startQuestionId');
+        if(startQuestionId !== null){
+            this.questionId = +startQuestionId;
+            console.log(this.questionId);
+        }
 
-    // this.optionsService.getOptions().subscribe(data => {
-    //     this.options = data.options;
-    //   });
+        this.questionOptionsService.questionOptions.subscribe(data => {
+          console.log(data);
+          this.questionOptions = data;
+          console.log(this.questionId);
+          if(this.questionId){
+            this.SetQuestionIds();
+            this.setQuestionTitle(this.questionId);
+            this.setQuestionOptions(this.questionId);
+          }
+        });
+
+        if(this.selectedTradepersonId)
+        {
+          this.questionOptionsService.setQuestionOptions(this.selectedTradepersonId);
+        }
+  }
+
+  optionChanged(event: any){
+    console.log(event);
+    const optionId = event;
+    if(optionId){
+      this.selectedOptionId = optionId;            
+    }
   }
 
   goToNextQuestion() {
-    
+    if(this.selectedOptionId){      
+      const selectedQuestionOption = this.questionOptions.find(qo => qo.TradePersonJobId == this.selectedJobId && qo.OptionId == this.selectedOptionId);
+      console.log(selectedQuestionOption);
+      if(selectedQuestionOption){
+        console.log(selectedQuestionOption);
+        if(selectedQuestionOption.NextQuestionId){          
+          this.questionId = selectedQuestionOption.NextQuestionId;
+          if(this.questionId){
+            this.SetQuestionIds();
+            this.setQuestionTitle(this.questionId);
+            this.setQuestionOptions(this.questionId);
+          }
+        }
+      }
+    }
   }
 
   goToPreviousQuestion() {
-    
+    if(this.questionId){
+      const previousQuestionId = this.getPreviousQuestionId(this.questionId);
+      if(previousQuestionId !== -1){
+        this.questionId = previousQuestionId;
+        if(this.questionId){
+          this.setQuestionTitle(this.questionId);
+          this.setQuestionOptions(this.questionId);          
+        }
+      }
+    }
+  }
+
+  setQuestionTitle(questionId: number){
+    const question = this.questionsService.getQuestionTitle(questionId);
+    if(question){
+      this.questionTitle = question;
+      this.questionTitle;
+    }            
+  }
+
+  setQuestionOptions(questionId: number){
+    const questionOptions = this.questionOptionsService.getQuestionOptions(questionId);
+    console.log(questionOptions);
+    this.options = [];
+    questionOptions.forEach(qo => {
+      const option = this.optionsService.getOption(qo.OptionId);
+      if(option){
+        this.options.push(option);
+      }              
+    });
+  }
+
+  SetQuestionIds(){
+    if(this.questionId){
+      const questionIdIndex = this.questionIds.findIndex(element => element ==this.questionId);
+      if(questionIdIndex == -1){
+        this.questionIds.push(this.questionId);
+      }
+    }
+  }
+
+  getPreviousQuestionId(questionId: number){
+    let previousQuestionId = -1;
+    const questionIdIndex = this.questionIds.findIndex(element => element ==questionId);
+    if(questionIdIndex > 0){
+      previousQuestionId = this.questionIds[questionIdIndex -1];
+    }
+    return previousQuestionId;
   }
 
   closeQuiz() {

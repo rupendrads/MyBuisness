@@ -11,11 +11,7 @@ import { QuestionOptions } from '../models/questionoptions.model';
   	providedIn: 'root',
 })
 export class OptionsService implements OnInit {
-
-    options: Options[] = [];
-    selectedOption: Options | undefined = undefined;
-    questions: Questions[] = [];
-    filteredQuestion: Questions[] | undefined = undefined;
+    options: Options[] = [];    
     private optionsUrl = '../../assets/JsonFiles/Options.json';
 
   	constructor(private http: HttpClient) {}
@@ -23,6 +19,12 @@ export class OptionsService implements OnInit {
   	ngOnInit(): void {}
 
  	getOptions() {
-        return this.http.get<any>(this.optionsUrl);     
+        this.http.get<any>(this.optionsUrl).subscribe(data => {
+            this.options = data;
+        });     
+    }
+
+    getOption(id: number){
+        return this.options.find(o => o.Id == id);
     }
 }

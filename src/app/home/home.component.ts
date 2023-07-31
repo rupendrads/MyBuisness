@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 
 import tradepersonjobData from '../../assets/JsonFiles/TradePersonJobs.json';
 import { TradepersonJob } from './models/tradepersonjob.model';
+import { QuestionsService } from '../post-a-job/services/questions.service';
+import { OptionsService } from '../post-a-job/services/options.service';
 
 @Component({
   selector: 'app-home',
@@ -21,10 +23,17 @@ export class HomeComponent implements OnInit {
   filteredJob: TradepersonJob[] | undefined = undefined;
   selectedJob: TradepersonJob | undefined;
   selectedJobId: number | any;
+  startQuestionId: number | undefined;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, 
+    private questionService: QuestionsService,
+    private optionsService: OptionsService){      
+    }
 
   ngOnInit(): void {
+    this.questionService.getQuestions();
+    this.optionsService.getOptions();
+    
     this.getfilteredTradepersons();
     console.log(this.filteredTradeperson);
   }
@@ -55,11 +64,18 @@ export class HomeComponent implements OnInit {
     console.log(event);
     this.selectedJobId = event;
     console.log(this.selectedJobId);
+
+    const selectedJob = tradepersonjobData.find(tp => tp.Id == this.selectedJobId);
+    if(selectedJob){
+      if(selectedJob.StartQuestionId){
+        this.startQuestionId = selectedJob.StartQuestionId;
+      }
+    }
   }
 
   onSubmit() {
     console.log(this.selectedTradepersonId);
     console.log(this.selectedJobId);
-    this.router.navigate(['/post-a-job', this.selectedTradepersonId, this.selectedJobId]);
+    this.router.navigate(['/post-a-job', this.selectedTradepersonId, this.selectedJobId, this.startQuestionId]);
   }
 }
