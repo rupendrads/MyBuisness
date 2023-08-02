@@ -4,7 +4,7 @@
         "TradePersonJobId" : 4,
         "QuestionId" : 1,
         "OptionId" : 1,
-        "NextQuestionId" : 2
+        "NextQuestionId" : 3
     },
     {
         "Id" : 2,

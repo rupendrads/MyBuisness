@@ -14,13 +14,15 @@ import { QuestionOptions } from './models/questionoptions.model';
 export class PostJobComponent implements OnInit{
   selectedTradepersonId: number| undefined;
   selectedJobId: number | undefined;
-  questionIndex: number = 0;
-  questionIds: number[]=[];
+  questionIndex: number = 0;  
   questionId: number | undefined;
   questionTitle: string = "";
   options: Options[] = []; 
   questionOptions: QuestionOptions[]=[]; 
-  selectedOptionId: number | undefined;
+  selectedOptionId: number = -1;
+
+  questionIds: number[]=[];
+  selectedOptionIds: number[]=[];
 
   constructor(private route: ActivatedRoute, 
     private questionOptionsService: QuestionOptionsService,
@@ -67,8 +69,33 @@ export class PostJobComponent implements OnInit{
     console.log(event);
     const optionId = event;
     if(optionId){
-      this.selectedOptionId = optionId;            
+      this.selectedOptionId = optionId;                  
+      this.SetQuestionIds();
+      this.setSelectedOptionIds(optionId);
+      console.log(this.questionIds);
+      console.log(this.selectedOptionIds);      
     }
+  }
+
+  SetQuestionIds(){
+    console.log(this.questionId);
+    if(this.questionId){      
+      const questionIdIndex = this.questionIds.findIndex(element => element ==this.questionId);
+      console.log(this.questionIds);
+      console.log(questionIdIndex);
+      if(questionIdIndex == -1){
+        this.questionIds.push(this.questionId);
+      }
+    }
+  }
+
+  setSelectedOptionIds(optionId: number){
+    const questionIdIndex = this.questionIds.findIndex(element => element ==this.questionId);
+    console.log(questionIdIndex);
+    if(questionIdIndex > -1){
+      this.selectedOptionIds[questionIdIndex] = optionId;
+    }
+    console.log(this.selectedOptionIds);
   }
 
   goToNextQuestion() {
@@ -80,9 +107,9 @@ export class PostJobComponent implements OnInit{
         if(selectedQuestionOption.NextQuestionId){          
           this.questionId = selectedQuestionOption.NextQuestionId;
           if(this.questionId){
-            this.SetQuestionIds();
             this.setQuestionTitle(this.questionId);
             this.setQuestionOptions(this.questionId);
+            this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);
           }
         }
       }
@@ -92,11 +119,13 @@ export class PostJobComponent implements OnInit{
   goToPreviousQuestion() {
     if(this.questionId){
       const previousQuestionId = this.getPreviousQuestionId(this.questionId);
+      this.selectedOptionId = this.getPrevNextSelectedOptionId(previousQuestionId);
       if(previousQuestionId !== -1){
         this.questionId = previousQuestionId;
         if(this.questionId){
           this.setQuestionTitle(this.questionId);
-          this.setQuestionOptions(this.questionId);          
+          this.setQuestionOptions(this.questionId);           
+          console.log(this.selectedOptionId);         
         }
       }
     }
@@ -122,15 +151,6 @@ export class PostJobComponent implements OnInit{
     });
   }
 
-  SetQuestionIds(){
-    if(this.questionId){
-      const questionIdIndex = this.questionIds.findIndex(element => element ==this.questionId);
-      if(questionIdIndex == -1){
-        this.questionIds.push(this.questionId);
-      }
-    }
-  }
-
   getPreviousQuestionId(questionId: number){
     let previousQuestionId = -1;
     const questionIdIndex = this.questionIds.findIndex(element => element ==questionId);
@@ -138,6 +158,17 @@ export class PostJobComponent implements OnInit{
       previousQuestionId = this.questionIds[questionIdIndex -1];
     }
     return previousQuestionId;
+  }
+
+  getPrevNextSelectedOptionId(questionId: number){
+    let prevNextSelectedOptionId = -1;
+    const questionIdIndex = this.questionIds.findIndex(element => element ==questionId);
+    console.log(questionIdIndex);
+    if(questionIdIndex > -1){
+      console.log(this.selectedOptionIds);
+      prevNextSelectedOptionId = this.selectedOptionIds[questionIdIndex];
+    }
+    return prevNextSelectedOptionId;
   }
 
   closeQuiz() {

@@ -9,7 +9,7 @@ import { Options } from '../models/options.model';
   export class ScreenComponent implements OnInit{
     @Input() questionTitle = '';
     @Input() options: Options[] = [];
-    selectedOptionId: number = -1;
+    @Input() selectedOptionId: number = -1;
     @Output() optionChanged = new EventEmitter<number>();
     
     ngOnInit(): void {    

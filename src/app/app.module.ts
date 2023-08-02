@@ -2,6 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideClientHydration } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { PostJobComponent } from './post-a-job/post-a-job.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ScreenComponent } from './post-a-job/screen/screen.component';
+import { JobtitleComponent } from './post-a-job/screen/static/job-title.component';
 
 @NgModule({
   declarations: [
@@ -17,15 +25,27 @@ import { ScreenComponent } from './post-a-job/screen/screen.component';
     HomeComponent,
     HeaderComponent,
     PostJobComponent,
-    ScreenComponent
+    ScreenComponent,
+    JobtitleComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatProgressBarModule,
+    MatInputModule,
+    MatCardModule
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(iconRegistry: MatIconRegistry) {
+    iconRegistry.setDefaultFontSetClass('material-icons-outlined');
+  }
+}

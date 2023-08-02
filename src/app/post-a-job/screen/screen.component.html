@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <div>
-        <h3>{{ questionTitle }}</h3>
+        <h4>{{ questionTitle }}</h4>
     </div>
 
     <div *ngFor="let option of options">
@@ -9,4 +9,5 @@
             <label class="form-check-label">{{ option.Title }}</label>
         </div>
     </div>
+    <app-job-title></app-job-title>
 </div>
