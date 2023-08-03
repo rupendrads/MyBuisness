@@ -10,13 +10,14 @@ import { Options } from '../models/options.model';
     @Input() questionTitle = '';
     @Input() options: Options[] = [];
     @Input() selectedOptionId: number = -1;
+    @Input() screenType= '';
     @Output() optionChanged = new EventEmitter<number>();
     
     ngOnInit(): void {    
     }
 
     changeOption(event: any){
-        console.log("selected option: " + this.selectedOptionId);
+        this.selectedOptionId = event;
         this.optionChanged.emit(this.selectedOptionId);
     }    
   }

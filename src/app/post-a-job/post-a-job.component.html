@@ -12,10 +12,11 @@
 		<div class="progress-bar" role="progressbar" aria-label="Example 20px high" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 	</mat-progress-bar>
 
-	 <app-screen [questionTitle]="questionTitle" [options]="options" [selectedOptionId]="selectedOptionId" (optionChanged)="optionChanged($event)"></app-screen>
+	 <app-screen [questionTitle]="questionTitle" [options]="options" [selectedOptionId]="selectedOptionId" 
+	 (optionChanged)="optionChanged($event)" [screenType]="screenType"></app-screen>
 		
 	<div class="mt-3">
-      <button class="btn btn-secondary mr-2" (click)="goToPreviousQuestion()" style="margin-right: 10px;">Back</button>
+      <button class="btn btn-secondary mr-2" (click)="goToPreviousQuestion()" style="margin-right: 10px;" [disabled]="questionIndex == 0">Back</button>
       <button class="btn btn-primary mr-2" (click)="goToNextQuestion()" [disabled]="">Next</button>      
 	  <!-- <div class="button-row">
 		<button mat-fab extended color="primary">

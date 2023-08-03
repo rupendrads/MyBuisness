@@ -20,9 +20,11 @@ export class PostJobComponent implements OnInit{
   options: Options[] = []; 
   questionOptions: QuestionOptions[]=[]; 
   selectedOptionId: number = -1;
-
+  
   questionIds: number[]=[];
   selectedOptionIds: number[]=[];
+
+  screenType="dynamic";
 
   constructor(private route: ActivatedRoute, 
     private questionOptionsService: QuestionOptionsService,
@@ -84,18 +86,44 @@ export class PostJobComponent implements OnInit{
       console.log(this.questionIds);
       console.log(questionIdIndex);
       if(questionIdIndex == -1){
-        this.questionIds.push(this.questionId);
+        this.questionIds.push(this.questionId);                
       }
+      this.setQuestionIndex(); 
+      console.log(this.questionIds);
+      console.log(this.questionIndex);
     }
   }
 
+  setQuestionIndex(){
+    const questionIdIndex = this.getQuestionIndex();
+    if(questionIdIndex == -1){
+      this.questionIndex = this.questionIds.length -1;
+    } else {
+      this.questionIndex =questionIdIndex;
+    }
+  }
+
+  getQuestionIndex(){
+    return this.questionIds.findIndex(element => element ==this.questionId);
+  }
+
   setSelectedOptionIds(optionId: number){
-    const questionIdIndex = this.questionIds.findIndex(element => element ==this.questionId);
+    const questionIdIndex = this.getQuestionIndex();
     console.log(questionIdIndex);
     if(questionIdIndex > -1){
       this.selectedOptionIds[questionIdIndex] = optionId;
     }
     console.log(this.selectedOptionIds);
+  }
+
+  setScreenType(){
+    if(this.questionId == 4){
+      this.screenType = "jobtitle";
+    } else if (this.questionId == 5){
+      this.screenType = "describe";
+    } else {
+      this.screenType = "dynamic";
+    }
   }
 
   goToNextQuestion() {
@@ -109,22 +137,40 @@ export class PostJobComponent implements OnInit{
           if(this.questionId){
             this.setQuestionTitle(this.questionId);
             this.setQuestionOptions(this.questionId);
-            this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);
+
+            this.setScreenType();            
+            console.log(this.screenType);
+            this.setQuestionIndex();
+            this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
           }
         }
       }
     }
   }
 
+  getPreviousQuestionId(questionId: number){
+    let previousQuestionId = -1;
+    console.log(this.questionIds);
+    const questionIdIndex = this.getQuestionIndex();
+    if(questionIdIndex > 0){
+      previousQuestionId = this.questionIds[questionIdIndex -1];
+    }
+    return previousQuestionId;
+  }
+
   goToPreviousQuestion() {
+    console.log(this.questionId);
     if(this.questionId){
       const previousQuestionId = this.getPreviousQuestionId(this.questionId);
       this.selectedOptionId = this.getPrevNextSelectedOptionId(previousQuestionId);
+      console.log(previousQuestionId);
       if(previousQuestionId !== -1){
         this.questionId = previousQuestionId;
         if(this.questionId){
           this.setQuestionTitle(this.questionId);
-          this.setQuestionOptions(this.questionId);           
+          this.setQuestionOptions(this.questionId);
+          this.setScreenType();
+          this.setQuestionIndex();           
           console.log(this.selectedOptionId);         
         }
       }
@@ -149,15 +195,6 @@ export class PostJobComponent implements OnInit{
         this.options.push(option);
       }              
     });
-  }
-
-  getPreviousQuestionId(questionId: number){
-    let previousQuestionId = -1;
-    const questionIdIndex = this.questionIds.findIndex(element => element ==questionId);
-    if(questionIdIndex > 0){
-      previousQuestionId = this.questionIds[questionIdIndex -1];
-    }
-    return previousQuestionId;
   }
 
   getPrevNextSelectedOptionId(questionId: number){
