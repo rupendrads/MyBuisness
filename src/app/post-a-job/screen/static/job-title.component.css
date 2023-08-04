@@ -5,52 +5,12 @@
 	flex-direction: column;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-.logo_name {
-  font-size: 30px;
-  font-weight: 700;
-  color: rgb(233, 80, 10);
-  font-family: "Montserrat", sans-serif;
-  -webkit-text-stroke: white 0.5px;
-  margin-left: 20px;
-}
-
-a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  text-decoration: none;
-  outline: 1px;
-}
-
-.progress {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  width: 80%;
-  margin: 50px 20px;
-}
-
-.progress-bar {
-  height: 40px; 
-  border: 2px solid #2196F3; 
-  border-radius: 4px; 
-  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  background-color: #4CAF50;
-}
-  
-.progress-bar:hover {
-    background-color: #FF5722; 
-}
-
 .jobtitle-form {
   width: 90%;
   padding: 20px;
   margin: 20px;
   display: flex;
+	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 }
@@ -69,8 +29,7 @@ a {
 }
 
 .col-jobtitle {
-  /* width: 50%;
-  border: 1px solid red; */
+  width: 50%;
 }
 
 .col-message {
@@ -91,13 +50,4 @@ a {
 
 .card-message {
   color: rgb(121, 121, 121);
-}
-
-.button-row {
-  margin: 40px 20px;
-}
-
-button {
-  font-size: 16px;
-  margin-left: 20px;
 }

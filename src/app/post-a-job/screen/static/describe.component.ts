@@ -9,6 +9,7 @@ export class DescribeComponent implements AfterViewInit{
   @Output() optionChanged = new EventEmitter<number>();
   
   ngAfterViewInit(){
+    console.log("emit from describe");
     this.optionChanged.emit(-1);
   }
 }

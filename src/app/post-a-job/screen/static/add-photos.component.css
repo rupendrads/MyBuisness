@@ -1,0 +1,100 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.addphotos-form {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: row;
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(233, 80, 10);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .row-addphotos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+  }
+
+  .col-addphotos {
+    display: flex;
+    align-items:flex-start;
+    justify-content:left;
+  }
+
+  .col-video {
+    display: flex;
+    align-items:start;
+    justify-content:right;
+  }
+    
+  .list-group-item1 {
+    width: 80px;
+    height: 80px;
+    border: .5px rgb(121, 121, 121) solid;
+    background-color: #FF5722;
+    display: flex;
+    align-items:center;
+    justify-content: center;  
+  }
+  
+  .list-group-item {
+    width: 80px;
+    height: 80px;
+    border: .5px rgb(121, 121, 121) solid;
+    display: flex;
+    align-items:center;
+    justify-content: center;  
+  }
+  
+   /* .btn-img {
+     width: 70px;
+     height: 70px;
+     background-color: #ff7600;
+     border: none;
+     color: white;
+     text-align: center;
+     text-decoration: none;
+     font-size: 16px;
+     cursor: pointer;
+     border-radius: 4px; 
+   } */
+  
+  .video-card {
+    max-width: 250px;
+    margin-top: 0px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  mat-card-title {
+    margin: 5px 0px;
+    font-size: 20px;
+    color: rgb(121, 121, 121);
+  }
+  
+  mat-card-content p {
+    margin: 10px 0px;
+  }
+  

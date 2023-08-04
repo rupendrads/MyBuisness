@@ -71,8 +71,10 @@ export class PostJobComponent implements OnInit{
     console.log(event);
     const optionId = event;
     if(optionId){
-      this.selectedOptionId = optionId;                  
+      this.selectedOptionId = optionId; 
+      console.log("In option changed");
       this.SetQuestionIds();
+      console.log(this.questionIds);
       this.setSelectedOptionIds(optionId);
       console.log(this.questionIds);
       console.log(this.selectedOptionIds);      
@@ -121,14 +123,17 @@ export class PostJobComponent implements OnInit{
       this.screenType = "jobtitle";
     } else if (this.questionId == 5){
       this.screenType = "describe";
-    } else {
+    } else if (this.questionId == 6){
+      this.screenType = "addphotos";
+    }else {
       this.screenType = "dynamic";
     }
   }
 
   goToNextQuestion() {
     if(this.selectedOptionId){      
-      const selectedQuestionOption = this.questionOptions.find(qo => qo.TradePersonJobId == this.selectedJobId && qo.OptionId == this.selectedOptionId);
+      const selectedQuestionOption = this.questionOptions.find(qo => qo.TradePersonJobId == this.selectedJobId && qo.OptionId == this.selectedOptionId && qo.QuestionId == this.questionId);
+
       console.log(selectedQuestionOption);
       if(selectedQuestionOption){
         console.log(selectedQuestionOption);

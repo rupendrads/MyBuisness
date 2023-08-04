@@ -21,6 +21,7 @@ import { ScreenComponent } from './post-a-job/screen/screen.component';
 import { JobtitleComponent } from './post-a-job/screen/static/job-title.component';
 import { DescribeComponent } from './post-a-job/screen/static/describe.component';
 import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component';
+import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component'
     ScreenComponent,
     DynamicComponent,
     JobtitleComponent,
-    DescribeComponent
+    DescribeComponent,
+    AddPhotosComponent
   ],
   imports: [
     BrowserModule,
