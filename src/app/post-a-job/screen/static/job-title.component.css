@@ -1,40 +1,40 @@
 .container {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: left;
 	flex-direction: column;
 }
 
 .jobtitle-form {
-  width: 90%;
-  padding: 20px;
-  margin: 20px;
+  width: 100%;
   display: flex;
 	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	justify-content: left;
+	flex-direction: row;
 }
 
 .row-jobtitle {
-  width: 90%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   flex-direction: row;
 }
 
 .mat-jobtitle {
-  align-items:end;
-  width: 300px;
+  width: 350px;
 }
 
-.col-jobtitle {
-  width: 50%;
+mat-card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
 }
 
 .col-message {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: row;
 }
@@ -49,5 +49,19 @@
 }
 
 .card-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(121, 121, 121);
+}
+
+.material-symbols-outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(233, 80, 10);
+}
+
+#symbol-report {
+  color: #1c39bb;
 }

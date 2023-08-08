@@ -7,9 +7,9 @@
 		</a>
 		<span class="example-spacer"></span>
 		<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="closeQuiz()">
-			<mat-icon>
-				<span class="material-symbols-outlined">close</span>
-			</mat-icon>
+			<span class="material-symbols-outlined">
+				close
+			</span>
 		</button>
 		</mat-toolbar-row>
 	</mat-toolbar> 
@@ -24,14 +24,11 @@
 	 
 	<div class="button-row">
 		<button mat-fab extended color="primary" (click)="goToPreviousQuestion()" style="margin-right: 10px;" [disabled]="questionIndex == 0">
-			<mat-icon>
-				<span class="material-symbols-outlined">arrow_back</span>
-			</mat-icon>Back
+			<span class="material-symbols-outlined">arrow_back</span>Back
 		</button>
 		<button mat-fab extended color="primary" (click)="goToNextQuestion()" [disabled]="">
-			<mat-icon>
-				<span class="material-symbols-outlined">arrow_forward</span>
-			</mat-icon>Next
+			Next
+			<span class="material-symbols-outlined">arrow_forward</span>
 		</button>
 	</div> 
 </div>
