@@ -1,0 +1,36 @@
+<div class="container">
+	<form class="col col-sm-12 col-md-12 col-lg-12 login-form">
+		<!-- Title -->
+		<div class="login-title">
+			<div class="title">Log-in to your account</div>	
+		</div>
+		<mat-card class="login-card">
+			<mat-card-header>
+				<img src="../../assets/Images/MyBusiness-Logo.png" alt="" width="200" height="80" class="img">
+			</mat-card-header>
+			<mat-card-title>Log in with password</mat-card-title>
+			<mat-card-content>
+				<mat-form-field>
+					<mat-label>Enter your email</mat-label>
+					<input matInput placeholder="pat@example.com" [formControl]="email" required>
+					<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+				</mat-form-field>
+				<mat-form-field>
+					<mat-label>Enter your password</mat-label>
+					<input matInput [type]="hide ? 'password' : 'text'">
+					<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+					  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+					</button>
+				</mat-form-field>
+				<div class="login-button">
+					<button mat-raised-button color="primary">Login</button>
+				</div>
+					<mat-divider></mat-divider>
+				<div class="forgot-password">
+					<a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+				</div>
+			</mat-card-content>
+		</mat-card>
+	</form> 
+</div>
+  

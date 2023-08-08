@@ -22,6 +22,7 @@ export class DescribeComponent implements OnInit, OnDestroy, AfterViewInit{
   }
   
   ngAfterViewInit(){
+    console.log("emit from describe");
     this.optionChanged.emit(-1);
   }
 

@@ -1,8 +1,90 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+
+mat-toolbar {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo_name {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(233, 80, 10);
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-stroke: white 0.5px;
+  margin-left: 20px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: 1px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  top: 85px;
+  /* left: 20px; */
+  position: fixed;
+  margin: 10px 10px;
+}
+
+.progress-bar {
+  height: 25px;
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: #4caf50;
+}
+
+.progress-bar:hover {
+  background-color: #ff5722;
+}
+
+app-screen {
+  width: 100%;
+  top: 115px;
+  left: 15px;
+  position: fixed;
+  color: rgb(121, 121, 121);;
+}
+
+.button-row {
+  margin: 40px 20px;
+  bottom: 40px;
+  position: fixed;
+}
+
+button {
+  font-size: 16px;
+  margin-left: 20px;
+}
+
 .list-group-item {
-    display: none;
-  }
-  
-  .list-group-item.active {
-    display: block;
-  }
-  
+  display: none;
+}
+
+.list-group-item.active {
+  display: block;
+}

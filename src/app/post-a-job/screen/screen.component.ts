@@ -18,6 +18,7 @@ import { Options } from '../models/options.model';
 
     changeOption(event: any){
         this.selectedOptionId = event;
+        console.log("emit from screen");
         this.optionChanged.emit(this.selectedOptionId);
     }    
   }

@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-2">
     <div>
         <h4>{{ questionTitle }}</h4>
     </div>
@@ -11,5 +11,11 @@
     </div>
     <div *ngIf="screenType == 'describe'">
         <app-describe (optionChanged)="changeOption($event)"></app-describe>
+    </div>
+    <div *ngIf="screenType == 'addphotos'">
+        <app-add-photos (optionChanged)="changeOption($event)"></app-add-photos>
+    </div>
+    <div *ngIf="screenType == 'budget'">
+        <app-budget (optionChanged)="changeOption($event)"></app-budget>
     </div>
 </div>

@@ -1,14 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideClientHydration } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +26,9 @@ import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgIf } from '@angular/common';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { BudgetComponent } from './post-a-job/screen/static/budget.component'
 
 @NgModule({
   declarations: [
@@ -31,10 +36,13 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     HomeComponent,
     HeaderComponent,
     PostJobComponent,
+    LogInComponent,
     ScreenComponent,
     DynamicComponent,
     JobtitleComponent,
-    DescribeComponent
+    DescribeComponent,
+    AddPhotosComponent,
+    BudgetComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +51,7 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     FormsModule,
     ReactiveFormsModule,
     NgIf,
+    MatFormFieldModule,
     HttpClientModule,
     MatFormFieldModule,    
     MatToolbarModule,
@@ -50,12 +59,16 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     MatButtonModule,
     MatProgressBarModule,
     MatInputModule,
+    MatSelectModule,
     MatCardModule,
     MatListModule
   ],
   providers: [provideClientHydration(),
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { 
   constructor(iconRegistry: MatIconRegistry) {

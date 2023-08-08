@@ -5,15 +5,25 @@
 	flex-direction: column;
 }
 
-.jobtitle-form {
+.budget-form {
   width: 100%;
   display: flex;
-	align-items: center;
-	justify-content: left;
-	flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
 }
 
-.row-jobtitle {
+.row-msg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 5px;
+  color: rgb(73, 73, 73);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.row-budget {
   margin-top: 10px;
   width: 100%;
   display: flex;
@@ -22,7 +32,7 @@
   flex-direction: row;
 }
 
-.mat-jobtitle {
+.mat-budget {
   width: 350px;
 }
 
