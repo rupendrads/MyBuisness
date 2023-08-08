@@ -54,9 +54,5 @@
     {
         "Id" : 14,
         "Title" : "Mobile number"
-    },
-    {
-        "Id" : 15,
-        "Title" : "Job Title"
     }
 ]

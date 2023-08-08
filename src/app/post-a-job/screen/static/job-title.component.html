@@ -1,39 +1,26 @@
-<div class="container">
-	<form class="jobtitle-form">
-		<div class="title">Give your job a title</div>
-			<div class="row row-jobtitle">
-				<div class="col col-jobtitle">
-					<mat-form-field class="mat-jobtitle">
-						<mat-label>Job Title</mat-label>
-						<input matInput placeholder="eg. upstairs bathroom refit" [formControl]="jobTitleFormControl">
-						<mat-hint><small>At least 8 characters please</small></mat-hint>
-						<mat-error *ngIf="jobTitleFormControl.hasError('required')">
-							Job Title is <strong>required</strong>
-						  </mat-error>
-					</mat-form-field>
-				</div>
-				<div class="col col-message">
-					<span class="material-symbols-outlined">
-                        arrow_left
-                    </span>
-					<mat-card>                        
-						<mat-card-content class="card-message">
-								The title of your job is the first thing tradespeople will see.
-						</mat-card-content>
-					</mat-card>
-				</div>
+<div class="container">		
+	<form class="jobtitle-form">			
+		<div class="row row-jobtitle">			
+			<div class="col-md-4 col-message">
+				<mat-form-field class="mat-jobtitle">
+					<mat-label>Job Title</mat-label>
+					<input matInput placeholder="eg. upstairs bathroom refit" [formControl]="jobTitleFormControl">
+					<mat-hint><small>At least 8 characters please</small></mat-hint>
+					<mat-error *ngIf="jobTitleFormControl.hasError('required')">
+						Job Title is <strong>required</strong>
+						</mat-error>
+				</mat-form-field>
 			</div>
-			<div class="col col-xs-12 col-sm-12 offset-md-2 col-md-6 offset-lg-2 col-lg-6 col-message">
-				<span class="material-symbols-outlined">arrow_back</span>
-				<mat-card> 
-					<span class="material-symbols-outlined" id="symbol-report">
-						report
-					</span>                       
-					<mat-card-content class="card-message">
+			<div class="col-md-6 col-message">
+				<span class="material-symbols-outlined" style="margin-top: 0px;align-self: center;">
+					arrow_left
+				</span>					
+				<mat-card>                        
+					<mat-card-content class="card-message">							
 							The title of your job is the first thing tradespeople will see.
 					</mat-card-content>
-				</mat-card>
+				</mat-card>				
 			</div>
-		</div>
+		</div>	
 	</form>
 </div>

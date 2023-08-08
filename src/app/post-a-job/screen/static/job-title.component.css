@@ -17,7 +17,7 @@
   margin-top: 10px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
 }
@@ -36,9 +36,8 @@ mat-card {
 
 .col-message {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 .title {

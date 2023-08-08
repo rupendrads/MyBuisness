@@ -130,7 +130,7 @@ export class PostJobComponent implements OnInit{
       this.screenType = "describe";
     } else if (this.questionId == 6){
       this.screenType = "addphotos";
-    } else if (this.questionId == 6){
+    } else if (this.questionId == 7){
       this.screenType = "budget";
     } else {
       this.screenType = "dynamic";
@@ -151,17 +151,20 @@ export class PostJobComponent implements OnInit{
         if(selectedQuestionOption.OptionId !== -1){
           this.updateJobPost(selectedQuestionOption);
         }
-        if(selectedQuestionOption.NextQuestionId){          
-          this.questionId = selectedQuestionOption.NextQuestionId;
-          if(this.questionId){
-            this.setQuestionTitle(this.questionId);
-            this.setQuestionOptions(this.questionId);
+        if(selectedQuestionOption.NextQuestionId){
+          console.log(selectedQuestionOption.NextQuestionId);
+          if(selectedQuestionOption.NextQuestionId !== -1){                   
+            this.questionId = selectedQuestionOption.NextQuestionId;
+            if(this.questionId){
+              this.setQuestionTitle(this.questionId);
+              this.setQuestionOptions(this.questionId);
 
-            this.setScreenType();            
-            console.log(this.screenType);
-            this.setQuestionIndex();
-            this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
-          }
+              this.setScreenType();            
+              console.log(this.screenType);
+              this.setQuestionIndex();
+              this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
+            }
+          } 
         }
       }
     }
