@@ -2,7 +2,7 @@ import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { QuestionOptions } from '../models/questionoptions.model';
+import { QuestionOption } from '../models/questionoption.model';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -10,8 +10,8 @@ import { Subject } from 'rxjs';
 })
 export class QuestionOptionsService implements OnInit {    
     private questionOptionsUrl = '../../assets/JsonFiles/QuestionOptions.json';
-    private questionOptionsData: QuestionOptions[] = [];
-    questionOptions =new Subject<QuestionOptions[]>();
+    private questionOptionsData: QuestionOption[] = [];
+    questionOptions =new Subject<QuestionOption[]>();
 
     constructor(private http: HttpClient) {}
 

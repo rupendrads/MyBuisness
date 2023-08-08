@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 import { Questions } from '../models/questions.model';
 import { Options } from '../models/options.model';
-import { QuestionOptions } from '../models/questionoptions.model';
+import { QuestionOption } from '../models/questionoption.model';
 
 
 @Injectable({

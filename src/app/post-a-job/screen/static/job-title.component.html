@@ -5,8 +5,11 @@
 				<div class="col col-jobtitle">
 					<mat-form-field class="mat-jobtitle">
 						<mat-label>Job Title</mat-label>
-						<input matInput placeholder="eg. upstairs bathroom refit">
+						<input matInput placeholder="eg. upstairs bathroom refit" [formControl]="jobTitleFormControl">
 						<mat-hint><small>At least 8 characters please</small></mat-hint>
+						<mat-error *ngIf="jobTitleFormControl.hasError('required')">
+							Job Title is <strong>required</strong>
+						  </mat-error>
 					</mat-form-field>
 				</div>
 				<div class="col col-message">

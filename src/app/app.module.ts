@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideClientHydration } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,6 +21,9 @@ import { ScreenComponent } from './post-a-job/screen/screen.component';
 import { JobtitleComponent } from './post-a-job/screen/static/job-title.component';
 import { DescribeComponent } from './post-a-job/screen/static/describe.component';
 import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgIf } from '@angular/common';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component'
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    NgIf,
     HttpClientModule,
+    MatFormFieldModule,    
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -47,7 +53,8 @@ import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component'
     MatCardModule,
     MatListModule
   ],
-  providers: [provideClientHydration()],
+  providers: [provideClientHydration(),
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
