@@ -62,6 +62,14 @@ a {
   background-color: #ff5722;
 }
 
+app-screen {
+  width: 100%;
+  top: 115px;
+  left: 15px;
+  position: fixed;
+  color: rgb(121, 121, 121);;
+}
+
 .button-row {
   margin: 40px 20px;
   bottom: 40px;

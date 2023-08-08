@@ -9,6 +9,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +26,7 @@ import { DescribeComponent } from './post-a-job/screen/static/describe.component
 import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component';
 import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { BudgetComponent } from './post-a-job/screen/static/budget.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { LogInComponent } from './log-in/log-in.component';
     DynamicComponent,
     JobtitleComponent,
     DescribeComponent,
-    AddPhotosComponent
+    AddPhotosComponent,
+    BudgetComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { LogInComponent } from './log-in/log-in.component';
     MatButtonModule,
     MatProgressBarModule,
     MatInputModule,
+    MatSelectModule,
     MatCardModule,
     MatListModule
   ],

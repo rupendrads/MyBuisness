@@ -125,7 +125,9 @@ export class PostJobComponent implements OnInit{
       this.screenType = "describe";
     } else if (this.questionId == 6){
       this.screenType = "addphotos";
-    }else {
+    } else if (this.questionId == 6){
+      this.screenType = "budget";
+    } else {
       this.screenType = "dynamic";
     }
   }
