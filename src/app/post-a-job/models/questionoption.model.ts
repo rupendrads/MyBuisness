@@ -1,5 +1,5 @@
 
-export interface QuestionOptions {
+export interface QuestionOption {
     Id: number;
     TradePersonJobId: number;
     QuestionId: number;
@@ -7,7 +7,7 @@ export interface QuestionOptions {
     NextQuestionId: number;
   }
   
-  export class QuestionOptions {
+  export class QuestionOption {
     public Id: number;
     public TradePersonJobId: number;
     public QuestionId: number;

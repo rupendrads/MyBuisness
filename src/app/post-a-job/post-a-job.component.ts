@@ -4,7 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 import { QuestionOptionsService } from './services/questionOptions.service';
 import { QuestionsService } from './services/questions.service';
 import { OptionsService } from './services/options.service';
-import { QuestionOptions } from './models/questionoptions.model';
+import { QuestionOption } from './models/questionoption.model';
+import { JobPostService } from './services/jobPost.service';
+import { JobPostQuestionOption } from './models/jobPostQuestionOption.model';
 
 @Component({
   selector: 'app-job',
@@ -18,7 +20,7 @@ export class PostJobComponent implements OnInit{
   questionId: number | undefined;
   questionTitle: string = "";
   options: Options[] = []; 
-  questionOptions: QuestionOptions[]=[]; 
+  questionOptions: QuestionOption[]=[]; 
   selectedOptionId: number = -1;
   
   questionIds: number[]=[];
@@ -29,7 +31,8 @@ export class PostJobComponent implements OnInit{
   constructor(private route: ActivatedRoute, 
     private questionOptionsService: QuestionOptionsService,
     private questionsService: QuestionsService,
-    private optionsService: OptionsService) {}
+    private optionsService: OptionsService,
+    private jobPostService: JobPostService) {}
 
   ngOnInit() {    
         const tpId = this.route.snapshot.paramMap.get('selectedTradepersonId');
@@ -65,6 +68,8 @@ export class PostJobComponent implements OnInit{
         {
           this.questionOptionsService.setQuestionOptions(this.selectedTradepersonId);
         }
+
+        this.jobPostService.setJobPostUser(100);
   }
 
   optionChanged(event: any){
@@ -134,6 +139,10 @@ export class PostJobComponent implements OnInit{
     }
   }
 
+  updateJobPost(selectedQuestionOption: QuestionOption){
+    this.jobPostService.updateQuestionOption(new JobPostQuestionOption(-1, -1, selectedQuestionOption.Id, selectedQuestionOption));
+  }
+
   goToNextQuestion() {
     if(this.selectedOptionId){      
       const selectedQuestionOption = this.questionOptions.find(qo => qo.TradePersonJobId == this.selectedJobId && qo.OptionId == this.selectedOptionId && qo.QuestionId == this.questionId);
@@ -141,20 +150,27 @@ export class PostJobComponent implements OnInit{
       console.log(selectedQuestionOption);
       if(selectedQuestionOption){
         console.log(selectedQuestionOption);
-        if(selectedQuestionOption.NextQuestionId){          
-          this.questionId = selectedQuestionOption.NextQuestionId;
-          if(this.questionId){
-            this.setQuestionTitle(this.questionId);
-            this.setQuestionOptions(this.questionId);
+        if(selectedQuestionOption.OptionId !== -1){
+          this.updateJobPost(selectedQuestionOption);
+        }
+        if(selectedQuestionOption.NextQuestionId){
+          console.log(selectedQuestionOption.NextQuestionId);
+          if(selectedQuestionOption.NextQuestionId !== -1){                   
+            this.questionId = selectedQuestionOption.NextQuestionId;
+            if(this.questionId){
+              this.setQuestionTitle(this.questionId);
+              this.setQuestionOptions(this.questionId);
 
-            this.setScreenType();            
-            console.log(this.screenType);
-            this.setQuestionIndex();
-            this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
-          }
+              this.setScreenType();            
+              console.log(this.screenType);
+              this.setQuestionIndex();
+              this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
+            }
+          } 
         }
       }
     }
+    console.log(this.jobPostService.JobPost);
   }
 
   getPreviousQuestionId(questionId: number){
@@ -184,6 +200,7 @@ export class PostJobComponent implements OnInit{
         }
       }
     }
+    console.log(this.jobPostService.JobPost);
   }
 
   setQuestionTitle(questionId: number){

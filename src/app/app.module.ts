@@ -1,8 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideClientHydration } from '@angular/platform-browser';
-import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
@@ -24,6 +23,9 @@ import { ScreenComponent } from './post-a-job/screen/screen.component';
 import { JobtitleComponent } from './post-a-job/screen/static/job-title.component';
 import { DescribeComponent } from './post-a-job/screen/static/describe.component';
 import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgIf } from '@angular/common';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { BudgetComponent } from './post-a-job/screen/static/budget.component'
@@ -50,8 +52,10 @@ import { ContactDetailsComponent } from './post-a-job/screen/static/contact-deta
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgIf,
     MatFormFieldModule,
     HttpClientModule,
+    MatFormFieldModule,    
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -61,7 +65,8 @@ import { ContactDetailsComponent } from './post-a-job/screen/static/contact-deta
     MatCardModule,
     MatListModule
   ],
-  providers: [provideClientHydration()],
+  providers: [provideClientHydration(),
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

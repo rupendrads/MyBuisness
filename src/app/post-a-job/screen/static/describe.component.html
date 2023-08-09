@@ -5,8 +5,11 @@
 				<div class="col col-xs-6 col-sm-6 col-md-5 col-lg-5 col-describe">
 					<mat-form-field class="mat-describe">
 						<mat-label>Describe:</mat-label>
-                        <textarea matInput placeholder="eg. Describe what you want done"></textarea>
-						<mat-hint align="end">At least 30 characters please</mat-hint>
+                        <textarea matInput placeholder="eg. Describe what you want done" [formControl]="jobDescriptionFormControl"></textarea>
+						<mat-hint align="end"><small>At least 30 characters please</small></mat-hint>
+						<mat-error *ngIf="jobDescriptionFormControl.hasError('required')">
+							Job Description is <strong>required</strong>
+						</mat-error>
 					</mat-form-field>
 				</div>
 				<div class="col col-xs-6 col-sm-6 col-md-5 col-lg-5 col-message">
