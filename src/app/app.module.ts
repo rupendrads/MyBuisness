@@ -30,6 +30,7 @@ import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.compon
 import { LogInComponent } from './log-in/log-in.component';
 import { BudgetComponent } from './post-a-job/screen/static/budget.component'
 import { ContactDetailsComponent } from './post-a-job/screen/static/contact-details.component'
+import { JobplaceComponent } from './post-a-job/screen/static/jobplace.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ContactDetailsComponent } from './post-a-job/screen/static/contact-deta
     DescribeComponent,
     AddPhotosComponent,
     BudgetComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    JobplaceComponent
   ],
   imports: [
     BrowserModule,

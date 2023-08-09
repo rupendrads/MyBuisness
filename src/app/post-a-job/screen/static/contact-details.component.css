@@ -67,11 +67,10 @@
     margin-left: -140px;
   }
   
-/*   
-  .login-button {
-    margin-top: 20px;
+  #symbol-phone {
+    color: #1c39bb;
+    position: fixed;
+    bottom: 15px;
+    right: 8px;
+    font-weight: 500;
   }
-  
-  .forgot-password {
-    margin-top: 10px;
-  } */
