@@ -18,4 +18,7 @@
     <div *ngIf="screenType == 'budget'">
         <app-budget (optionChanged)="changeOption($event)"></app-budget>
     </div>
+    <div *ngIf="screenType == 'contactdetails'">
+        <app-contact-details (optionChanged)="changeOption($event)"></app-contact-details>
+    </div>
 </div>

@@ -27,6 +27,7 @@ import { DynamicComponent } from './post-a-job/screen/dynamic/dynamic.component'
 import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { BudgetComponent } from './post-a-job/screen/static/budget.component'
+import { ContactDetailsComponent } from './post-a-job/screen/static/contact-details.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BudgetComponent } from './post-a-job/screen/static/budget.component'
     JobtitleComponent,
     DescribeComponent,
     AddPhotosComponent,
-    BudgetComponent
+    BudgetComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
