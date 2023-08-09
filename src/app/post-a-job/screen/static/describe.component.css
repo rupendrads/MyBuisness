@@ -2,18 +2,8 @@
   top: 80px;
 	display: flex;
 	align-items: center;
-	justify-content:space-evenly;
-	flex-direction: column;
-}
-
-.describe-form {
-  width: 90%;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	flex-direction: row;
+  justify-content: flex-start;
 }
 
 .title {
@@ -25,29 +15,27 @@
 }
 
 .row-describe {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content:flex-start;
   flex-direction: row;
 }
 
 .mat-describe {
   align-items:center;
-  width: 400px;
+  width: 98%; 
   height: 300px;
 }
 
 .col-describe {
   display: flex;
   align-items:start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .col-message {
   display: flex;
-  align-items:end;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
 }
 
@@ -56,7 +44,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 400px;
   padding: 0px 5px;
   color: rgb(121, 121, 121);
 }

@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 10px;
-  margin: 0px 0px;
+  margin-bottom: 10px;
   color: rgb(121, 121, 121);
   font-size: 16px;
   font-weight: 200;
@@ -48,7 +48,7 @@ mat-card {
 .col-message {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .title {
@@ -65,19 +65,19 @@ mat-card {
   color: rgb(121, 121, 121);
 }
 
-.material-symbols-outlined {
-  margin-top: 30px;
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.material-symbols-outlined {  
   color: rgb(233, 80, 10);
   font-weight: 600;
-}
+} 
 
 #symbol-report {
   color: #1c39bb;
-  margin-left: 5px;
+  margin-right: 5px;
   font-weight: 500;
-  margin-bottom: 25px;
+}
+
+.mat-card-content-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
