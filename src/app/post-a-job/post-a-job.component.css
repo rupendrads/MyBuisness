@@ -64,15 +64,15 @@ a {
 
 app-screen {
   width: 100%;
-  top: 115px;
+  top: 110px;
   left: 15px;
   position: fixed;
   color: rgb(121, 121, 121);;
 }
 
 .button-row {
-  margin: 40px 20px;
-  bottom: 30px;
+  margin: 30px 20px;
+  bottom: 20px;
   position: fixed;
 }
 
