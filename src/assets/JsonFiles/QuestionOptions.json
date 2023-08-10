@@ -130,6 +130,20 @@
         "TradePersonJobId" : 4,
         "QuestionId" : 8,
         "OptionId" : -1,
+        "NextQuestionId" : 9
+    },
+    {
+        "Id" : 20,
+        "TradePersonJobId" : 4,
+        "QuestionId" : 9,
+        "OptionId" : -1,
+        "NextQuestionId" : 10
+    },
+    {
+        "Id" : 21,
+        "TradePersonJobId" : 4,
+        "QuestionId" : 10,
+        "OptionId" : -1,
         "NextQuestionId" : -1
     }
 ]

@@ -28,8 +28,10 @@ import { NgIf } from '@angular/common';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { AddPhotosComponent } from './post-a-job/screen/static/add-photos.component';
 import { LogInComponent } from './log-in/log-in.component';
-import { BudgetComponent } from './post-a-job/screen/static/budget.component'
-import { ContactDetailsComponent } from './post-a-job/screen/static/contact-details.component'
+import { BudgetComponent } from './post-a-job/screen/static/budget.component';
+import { ContactDetailsComponent } from './post-a-job/screen/static/contact-details.component';
+import { JobplaceComponent } from './post-a-job/screen/static/jobplace.component';
+import { JobTermsComponent } from './post-a-job/screen/static/job-terms.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,10 @@ import { ContactDetailsComponent } from './post-a-job/screen/static/contact-deta
     DescribeComponent,
     AddPhotosComponent,
     BudgetComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    JobplaceComponent,
+    JobTermsComponent
+    
   ],
   imports: [
     BrowserModule,

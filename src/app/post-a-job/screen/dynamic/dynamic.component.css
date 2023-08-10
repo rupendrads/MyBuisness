@@ -1,6 +1,9 @@
+
 .container {
     position: fixed;
-    top: 150px;
+    top: 170px;
+    max-width: 1000px;
+    margin: 10 auto;
 }
 
 .select {
@@ -9,4 +12,48 @@
     margin-bottom: 5px;
 }
 
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+  }
+  
+.form-check-input {
+    margin-right: 10px;
+    font-weight: 400;
+    /* color:  #4150B7; */
+    border: 2px solid #263572;
+}
 
+.form-check-input:hover {
+    border-color: #4150B7;
+    border: 2px solid #263572;
+}
+
+.form-check-label {
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-check-input:hover + .form-check-label {
+    border-color: #4150B7;
+  }
+  
+  .form-check-input:checked + .form-check-label {
+    background-color: #cad0e9;
+    border-color: #4150B7;
+  }
+  
+  .form-check-input:checked:hover + .form-check-label {
+    background-color: #cad0e9;
+    border-color: #263572;
+  }

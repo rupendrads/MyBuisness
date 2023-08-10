@@ -66,12 +66,24 @@
     color: #1c39bb;
     margin-left: -140px;
   }
-  
-/*   
-  .login-button {
-    margin-top: 20px;
+
+  .col-phone {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    flex-direction: column;
+  }
+
+  .row-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
-  .forgot-password {
-    margin-top: 10px;
-  } */
+  #symbol-phone {
+    color: #1c39bb;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    font-weight: 500;
+  }

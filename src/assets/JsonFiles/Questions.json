@@ -30,5 +30,13 @@
     {
         "Id" : 8,
         "Title" : "Contact Details"
-    }
+    },
+    {
+        "Id" : 9,
+        "Title" : "Where will the job take place"
+    },
+    {
+        "Id" : 10,
+        "Title" : "Nearly done..."
+    }   
 ]
