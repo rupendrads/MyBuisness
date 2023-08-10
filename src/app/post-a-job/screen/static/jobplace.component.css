@@ -37,6 +37,12 @@ mat-card {
   flex-direction: row;
   
 }
+.mat-card-content-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(121, 121, 121);
+}
 
 .col-message {
   display: flex;

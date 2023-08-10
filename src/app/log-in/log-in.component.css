@@ -18,51 +18,69 @@
   .login-title {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
   }
 
   .title {
-    width: 450px;
-    margin: 10px;
-    padding: 10px;
+    width: 350px;
+    margin: 4px;
+    padding: 4px;
     font-size: 30px;
     font-weight: 700;
     line-height: 1;
-    color: rgb(233, 80, 10);
+    color: rgb(121, 121, 121);
     align-items: center;
   }
-  
+
+  mat-card-title {
+    margin: 4px;
+    padding: 4px;
+    color: rgb(121, 121, 121);
+    align-items: center;
+    font-weight: 500;
+  }
+
   .login-card {
-    width: 500px;
-    padding: 10px;
+    width: 400px;
+    padding: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: 2px solid rgb(233, 80, 10);
+    border-radius: 6px;
   }
 
   mat-card-content {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
-  .container mat-form-field + mat-form-field {
-    margin-left: 8px;
+  .container mat-form-field {
+    margin: 4px 0px;
+  }
+
+  .col-email, .col-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  
   .login-button {
+    width: 100%;
     margin-top: 20px;
   }
   
   .forgot-password {
     margin-top: 10px;
+    font-weight: 300;
   }
 
   mat-divider {
     margin-top: 10px;
+    color: rgb(121, 121, 121);
   }
   

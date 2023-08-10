@@ -66,11 +66,24 @@
     color: #1c39bb;
     margin-left: -140px;
   }
+
+  .col-phone {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    flex-direction: column;
+  }
+
+  .row-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   #symbol-phone {
     color: #1c39bb;
     position: fixed;
     bottom: 15px;
-    right: 8px;
+    right: 10px;
     font-weight: 500;
   }

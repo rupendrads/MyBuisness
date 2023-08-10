@@ -21,4 +21,10 @@
     <div *ngIf="screenType == 'contactdetails'">
         <app-contact-details (optionChanged)="changeOption($event)"></app-contact-details>
     </div>
+    <div *ngIf="screenType == 'jobplace'">
+        <app-jobplace (optionChanged)="changeOption($event)"></app-jobplace>
+    </div>
+    <div *ngIf="screenType == 'jobterms'">
+        <app-job-terms (optionChanged)="changeOption($event)"></app-job-terms>
+    </div>
 </div>
