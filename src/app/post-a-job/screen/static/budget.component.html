@@ -6,7 +6,7 @@
 			</div>
 		</div>
 		<div class="row row-budget">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-message">
+			<div class="col-md-4 col-message">
 				<mat-form-field class="mat-budget">
 					<mat-label>Select Budget</mat-label>
 					<mat-select [(value)]="selectedBudget">
@@ -21,7 +21,8 @@
 			</div>
 			<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-message">
 				<span class="material-symbols-outlined">arrow_left</span>
-				<mat-card>						                         	
+				<mat-card>						                         
+					<mat-card-content>	
 						<div class="mat-card-content-div">
 							<span class="material-symbols-outlined" id="symbol-report">
 								report
@@ -29,9 +30,10 @@
 							<span>
 								You're not committing to anything here. It's just a guide.
 							</span>
-						</div>
-				</mat-card>
-			</div>						
+						</div>						
+					</mat-card-content>
+				</mat-card>								
+			</div>
 		</div>
 	</form>
 </div>
