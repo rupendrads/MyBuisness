@@ -41,16 +41,17 @@ export class ContactDetailsComponent implements OnInit, AfterViewInit, OnDestroy
   }  
 
   ngOnDestroy(): void {
-    console.log(this.contactDetailsForm.value);
-    if(this.contactDetailsForm.valid && this.contactDetailsForm.value!== null){
-      if(this.contactDetailsForm.controls["firstName"].value && 
-      this.contactDetailsForm.controls["lastName"].value && 
-      this.contactDetailsForm.controls["email"].value &&
-      this.contactDetailsForm.controls["mobile"].value){
+    console.log(this.contactDetailsForm.value);    
+    if(this.contactDetailsForm.value!== null){
+      if(this.contactDetailsForm.controls["firstName"].value!== null && 
+      this.contactDetailsForm.controls["lastName"].value!== null && 
+      this.contactDetailsForm.controls["email"].value!== null &&
+      this.contactDetailsForm.controls["mobile"].value!== null){        
         this.jobPostService.setJobContactDetails(this.contactDetailsForm.controls["firstName"].value,
         this.contactDetailsForm.controls["lastName"].value,
         this.contactDetailsForm.controls["email"].value,
         this.contactDetailsForm.controls["mobile"].value);
+        console.log(this.jobPostService.JobPost);
       }
     }
   }

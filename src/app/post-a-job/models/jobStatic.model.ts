@@ -7,7 +7,8 @@ export interface IJobStatic {
     FirstName: string;
     LastName: string;
     Email: string;
-    Mobile: string;    
+    Mobile: string;
+    PostCode: string;    
   }
   
   export class JobStatic implements IJobStatic {
@@ -20,9 +21,10 @@ export interface IJobStatic {
     public LastName: string;
     public Email: string;
     public Mobile: string;   
+    public PostCode: string;
           
     constructor(id: number, title: string, description: string, imagePath: string, budget:string,
-      firstName: string, lastName: string, email: string, mobile: string) {
+      firstName: string, lastName: string, email: string, mobile: string, postCode: string) {
       this.Id = id;
       this.Title = title;
       this.Description = description;
@@ -32,5 +34,6 @@ export interface IJobStatic {
       this.LastName = lastName;
       this.Email = email;
       this.Mobile = mobile;
+      this.PostCode = postCode;
     }
   }
