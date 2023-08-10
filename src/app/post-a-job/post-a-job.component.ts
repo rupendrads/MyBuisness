@@ -27,6 +27,7 @@ export class PostJobComponent implements OnInit{
   selectedOptionIds: number[]=[];
 
   screenType="dynamic";
+  progressValue=0;
 
   constructor(private route: ActivatedRoute, 
     private questionOptionsService: QuestionOptionsService,
@@ -98,6 +99,7 @@ export class PostJobComponent implements OnInit{
       this.setQuestionIndex(); 
       console.log(this.questionIds);
       console.log(this.questionIndex);
+      console.log(this.questionIds.length);      
     }
   }
 
@@ -143,6 +145,13 @@ export class PostJobComponent implements OnInit{
     this.jobPostService.updateQuestionOption(new JobPostQuestionOption(-1, -1, selectedQuestionOption.Id, selectedQuestionOption));
   }
 
+  forwardProgressValue(){
+    this.progressValue = this.progressValue + 10;
+  }
+  backwardProgressValue(){
+    this.progressValue = this.progressValue - 10;
+  }
+
   goToNextQuestion() {
     if(this.selectedOptionId){      
       const selectedQuestionOption = this.questionOptions.find(qo => qo.TradePersonJobId == this.selectedJobId && qo.OptionId == this.selectedOptionId && qo.QuestionId == this.questionId);
@@ -164,7 +173,8 @@ export class PostJobComponent implements OnInit{
               this.setScreenType();            
               console.log(this.screenType);
               this.setQuestionIndex();
-              this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
+              this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);
+              this.forwardProgressValue();            
             }
           } 
         }
@@ -196,7 +206,8 @@ export class PostJobComponent implements OnInit{
           this.setQuestionOptions(this.questionId);
           this.setScreenType();
           this.setQuestionIndex();           
-          console.log(this.selectedOptionId);         
+          console.log(this.selectedOptionId); 
+          this.backwardProgressValue();  
         }
       }
     }
@@ -220,8 +231,8 @@ export class PostJobComponent implements OnInit{
       if(option){
         this.options.push(option);
       }              
-    });
-  }
+    });    
+  }  
 
   getPrevNextSelectedOptionId(questionId: number){
     let prevNextSelectedOptionId = -1;

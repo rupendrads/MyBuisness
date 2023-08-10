@@ -14,8 +14,8 @@
 		</mat-toolbar-row>
 	</mat-toolbar> 
 
-	<mat-progress-bar class="progress" mode="determinate" value="40">
-		<div class="progress-bar" role="progressbar" aria-label="Example 30px high" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	<mat-progress-bar class="progress" mode="determinate" color="accent" [value]="progressValue">
+		<!-- <div class="progress-bar" role="progressbar" aria-label="Example 30px high" style="width: 25%;" [aria-valuenow]="25" aria-valuemin="0" aria-valuemax="100"></div> -->
 	</mat-progress-bar>
 
 	<app-screen [questionTitle]="questionTitle" [options]="options" [selectedOptionId]="selectedOptionId" 
