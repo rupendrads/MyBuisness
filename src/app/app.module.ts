@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { PopularJobsComponent } from './home/popular-jobs/popular-jobs.component';
 import { HeaderComponent } from './header/header.component';
 import { PostJobComponent } from './post-a-job/post-a-job.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -37,6 +38,7 @@ import { JobTermsComponent } from './post-a-job/screen/static/job-terms.componen
   declarations: [
     AppComponent,
     HomeComponent,
+    PopularJobsComponent,
     HeaderComponent,
     PostJobComponent,
     LogInComponent,
