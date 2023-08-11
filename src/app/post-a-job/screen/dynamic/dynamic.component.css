@@ -1,9 +1,16 @@
- .container {
+
+.container {
     position: fixed;
     top: 170px;
     max-width: 1000px;
     margin: 10 auto;
-} 
+}
+
+.select {
+    border: 1px solid lightgray;
+    padding:5px 10px;
+    margin-bottom: 5px;
+}
 
 .form-check {
     display: flex;

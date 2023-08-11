@@ -15,7 +15,7 @@ export class JobPostService implements OnInit {
 
     constructor(){
         this.JobPost = new JobPost(-1, -1, new Date());
-        this.JobPost.JobStatic = new JobStatic(-1, "", "", "", "", "", "", "", "");
+        this.JobPost.JobStatic = new JobStatic(-1, "", "", "", "", "", "", "", "", "");
     }
 
     ngOnInit(): void {        
@@ -62,6 +62,12 @@ export class JobPostService implements OnInit {
             this.JobPost.JobStatic.LastName = lastName;
             this.JobPost.JobStatic.Email = email;
             this.JobPost.JobStatic.Mobile = mobile;
+        }
+    }
+
+    setJobPostCode(jobPostCode: string){
+        if(this.JobPost.JobStatic){
+            this.JobPost.JobStatic.PostCode =jobPostCode;
         }
     }
 

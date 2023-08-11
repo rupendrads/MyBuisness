@@ -27,6 +27,7 @@ export class PostJobComponent implements OnInit{
   selectedOptionIds: number[]=[];
 
   screenType="dynamic";
+  progressValue=0;
 
   constructor(private route: ActivatedRoute, 
     private questionOptionsService: QuestionOptionsService,
@@ -98,6 +99,7 @@ export class PostJobComponent implements OnInit{
       this.setQuestionIndex(); 
       console.log(this.questionIds);
       console.log(this.questionIndex);
+      console.log(this.questionIds.length);      
     }
   }
 
@@ -134,13 +136,25 @@ export class PostJobComponent implements OnInit{
       this.screenType = "budget";
     } else if (this.questionId == 8){
       this.screenType = "contactdetails";
-    } else {
+    } else if (this.questionId == 9){
+      this.screenType = "jobplace";
+    } else if (this.questionId == 10){
+      this.screenType = "jobterms";
+    }     
+    else {
       this.screenType = "dynamic";
     }
   }
 
   updateJobPost(selectedQuestionOption: QuestionOption){
     this.jobPostService.updateQuestionOption(new JobPostQuestionOption(-1, -1, selectedQuestionOption.Id, selectedQuestionOption));
+  }
+
+  forwardProgressValue(){
+    this.progressValue = this.progressValue + 10;
+  }
+  backwardProgressValue(){
+    this.progressValue = this.progressValue - 10;
   }
 
   goToNextQuestion() {
@@ -164,7 +178,8 @@ export class PostJobComponent implements OnInit{
               this.setScreenType();            
               console.log(this.screenType);
               this.setQuestionIndex();
-              this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);            
+              this.selectedOptionId = this.getPrevNextSelectedOptionId(this.questionId);
+              this.forwardProgressValue();            
             }
           } 
         }
@@ -196,7 +211,8 @@ export class PostJobComponent implements OnInit{
           this.setQuestionOptions(this.questionId);
           this.setScreenType();
           this.setQuestionIndex();           
-          console.log(this.selectedOptionId);         
+          console.log(this.selectedOptionId); 
+          this.backwardProgressValue();  
         }
       }
     }
@@ -220,8 +236,8 @@ export class PostJobComponent implements OnInit{
       if(option){
         this.options.push(option);
       }              
-    });
-  }
+    });    
+  }  
 
   getPrevNextSelectedOptionId(questionId: number){
     let prevNextSelectedOptionId = -1;
