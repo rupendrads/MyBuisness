@@ -32,6 +32,7 @@ import { BudgetComponent } from './post-a-job/screen/static/budget.component';
 import { ContactDetailsComponent } from './post-a-job/screen/static/contact-details.component';
 import { JobplaceComponent } from './post-a-job/screen/static/jobplace.component';
 import { JobTermsComponent } from './post-a-job/screen/static/job-terms.component';
+import { FileUploadComponent } from './post-a-job/common/fileUpload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +49,8 @@ import { JobTermsComponent } from './post-a-job/screen/static/job-terms.componen
     BudgetComponent,
     ContactDetailsComponent,
     JobplaceComponent,
-    JobTermsComponent
-    
+    JobTermsComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +69,7 @@ import { JobTermsComponent } from './post-a-job/screen/static/job-terms.componen
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [provideClientHydration(),
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],

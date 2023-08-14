@@ -1,0 +1,7 @@
+.file-upload-button {
+    height: 80px;
+    width: 80px;    
+    border:none;
+    background-image: url('https://www.newdelhiairport.in/src/images/advertise/upload.jpg') !important;
+    background-size: contain;
+}
