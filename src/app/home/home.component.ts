@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     if(selectedJob){
       if(selectedJob.StartQuestionId){
         this.startQuestionId = selectedJob.StartQuestionId;
+        console.log(this.startQuestionId);
       }
     }
   }
