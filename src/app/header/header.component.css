@@ -9,6 +9,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.navbar-collapse {
+  align-items: flex-start;  
+}
+
 button:focus,
 .navbar-toggler:focus {
     outline: none;
@@ -22,9 +26,9 @@ button:focus,
 }
   
 .menu_wrapper .navbar-brand {
-  font-size: 30px;
-  font-weight: 700;
-  color: rgb(233, 80, 10);
+  font-size: 25px;
+  font-weight: 800;
+  color: black;
   -webkit-text-stroke: white .5px;
 }
 
@@ -39,7 +43,7 @@ button:focus,
 .menu_wrapper .navbar-nav .nav-link {
   font-size: 16px;
   font-weight: 400;
-  color: rgb(41, 40, 43);
+  color: black;
   display: inline-block;
 }
 
@@ -88,7 +92,7 @@ button:focus,
 /* Responsive */
 @media(max-width: 768px) {
   .navbar-brand {
-      font-size: 30px
+      font-size: 20px
   }
 
   .navbar-nav .nav-item {
