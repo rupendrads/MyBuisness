@@ -6,9 +6,14 @@ import {Observable} from 'rxjs';
 providedIn: 'root'
 })
 export class FileUploadService {
-    apiUrl = "https://file.io"
+    apiUrl = "https://file.io";
+    fileUrls: any[] = [];
         
     constructor(private http:HttpClient) { }
+
+    setFileUrls(fileUrls: any[]){
+        this.fileUrls = [...fileUrls];
+    }
 
     upload(file: any):Observable<any> {
         const formData = new FormData();
