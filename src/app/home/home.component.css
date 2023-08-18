@@ -29,6 +29,8 @@
 
 .row-form-label {
     font-size: 0.80rem;
+    color: #211c23;
+    font-weight: 600;
 }
 
 form {

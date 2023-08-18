@@ -1,0 +1,53 @@
+.our-services-title {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 0px;
+}
+
+.title {
+    width: 335px;
+    margin: 4px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    align-items: center;
+    padding-bottom: 20px;    
+    border-bottom: 1px solid dodgerblue;
+  }
+
+  .cards-container-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 5px;
+    max-width:1125px;
+  }
+
+  .our-services-card {
+    width: 335px;    
+    margin: 5px 15px;
+    padding: 7px 7x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;      
+  }
+
+  .our-service {
+    font-weight: 300;
+    font-size: 16px;
+    color: #636065;
+    text-decoration: none;  
+  }
+
+  .our-service:hover{
+    text-decoration: underline;
+  }
