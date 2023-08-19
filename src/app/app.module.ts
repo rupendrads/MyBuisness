@@ -34,6 +34,8 @@ import { ContactDetailsComponent } from './post-a-job/screen/static/contact-deta
 import { JobplaceComponent } from './post-a-job/screen/static/jobplace.component';
 import { JobTermsComponent } from './post-a-job/screen/static/job-terms.component';
 import { FileUploadComponent } from './post-a-job/common/fileUpload/file-upload.component';
+import { OurServicesComponent } from './home/our-services/our-services.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { FileUploadComponent } from './post-a-job/common/fileUpload/file-upload.
     ContactDetailsComponent,
     JobplaceComponent,
     JobTermsComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    OurServicesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

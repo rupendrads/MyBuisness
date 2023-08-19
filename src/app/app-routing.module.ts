@@ -4,7 +4,7 @@ import { PostJobComponent } from './post-a-job/post-a-job.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'post-a-job/:selectedTradepersonId/:selectedJobId/:startQuestionId', component: PostJobComponent },
   { path: 'post-a-job', component: PostJobComponent }
 ];

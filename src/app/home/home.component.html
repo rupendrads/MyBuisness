@@ -1,36 +1,41 @@
-<div class="container">
-	<app-header></app-header>
+<div>	
 	<!-- Title -->
-	<div class="home-title">
+	<!-- <div class="home-title">
 		<div class="title">Find a local tradesperson for your job</div>
 		<div class="sub-title">Post your job for free. Get quotes. Read reviews.</div>	
-	</div>
+	</div> -->
 
 	<!-- Form -->
 	<div class="flex-container">
 		<form (ngSubmit)="onSubmit()" #myForm="ngForm">
-			<div class="dropdown-container">
-				<label for="tradeperson" class="row-form-label">What type of tradeperson do you need?</label>
-					<select class="form-control form-control-sm" placeholder="Please select tradeperson" name="tradeperson" (ngModelChange)="onTradepersonSelect($event)" ngModel>
-						<option [value]="null">Select Tradesperson Type</option>
-						<option *ngFor="let tradeperson of filteredTradeperson" [value]="tradeperson.Id">
-							{{ tradeperson.Title }}
-						</option>
-					</select>
-			</div>	
-			<div class="dropdown-container">
-				<label for="job" class="row-form-label">What type of job is it?</label>
-					<select class="form-control form-control-sm" placeholder="Please select job" [disabled]="selectedTradepersonId == undefined" name="job" (ngModelChange)="onJobSelect($event)" ngModel>
-						<option [value]="null">Select Job Type</option>
-						<option *ngFor="let job of filteredJob" [value]="job.Id">
-							{{ job.Title }}
-						</option>
-					</select>
+			<div style="display: flex; flex-direction: row;align-items: flex-end;">
+				<div class="dropdown-container">
+					<label for="tradeperson" class="row-form-label">What type of tradeperson do you need?</label>
+						<select class="form-control form-control-sm" placeholder="Please select tradeperson" name="tradeperson" (ngModelChange)="onTradepersonSelect($event)" ngModel>
+							<option [value]="null">Select Tradesperson Type</option>
+							<option *ngFor="let tradeperson of filteredTradeperson" [value]="tradeperson.Id">
+								{{ tradeperson.Title }}
+							</option>
+						</select>
+				</div>	
+				<div class="dropdown-container">
+					<label for="job" class="row-form-label">What type of job is it?</label>
+						<select class="form-control form-control-sm" placeholder="Please select job" [disabled]="selectedTradepersonId == undefined" name="job" (ngModelChange)="onJobSelect($event)" ngModel>
+							<option [value]="null">Select Job Type</option>
+							<option *ngFor="let job of filteredJob" [value]="job.Id">
+								{{ job.Title }}
+							</option>
+						</select>
+				</div>
+				<div>
+					<button class="btn btn-primary btn-submit" [disabled]="selectedTradepersonId == undefined || selectedJobId == undefined" type="submit" value="Submit">Next</button>	
+				</div>
 			</div>
-				<button class="btn-submit" [disabled]="selectedTradepersonId == undefined || selectedJobId == undefined" type="submit" value="Submit">Next Step ></button>	
 		</form>
 	</div>
+	<app-popular-jobs></app-popular-jobs>
+	<app-our-services></app-our-services>
 </div>
 
-<app-popular-jobs></app-popular-jobs>
+
 
