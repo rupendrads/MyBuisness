@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "RatedPeopleRepository": {
+    "TopBuilderRepository": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/RatedPeopleRepository/browser",
+            "outputPath": "dist/TopBuilderRepository/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -40,12 +40,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "5mb"
                 }
               ],
               "outputHashing": "all"
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "RatedPeopleRepository:build:production"
+              "browserTarget": "TopBuilderRepository:build:production"
             },
             "development": {
-              "browserTarget": "RatedPeopleRepository:build:development"
+              "browserTarget": "TopBuilderRepository:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RatedPeopleRepository:build"
+            "browserTarget": "TopBuilderRepository:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/RatedPeopleRepository/server",
+            "outputPath": "dist/TopBuilderRepository/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -123,12 +123,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "RatedPeopleRepository:build:development",
-              "serverTarget": "RatedPeopleRepository:server:development"
+              "browserTarget": "TopBuilderRepository:build:development",
+              "serverTarget": "TopBuilderRepository:server:development"
             },
             "production": {
-              "browserTarget": "RatedPeopleRepository:build:production",
-              "serverTarget": "RatedPeopleRepository:server:production"
+              "browserTarget": "TopBuilderRepository:build:production",
+              "serverTarget": "TopBuilderRepository:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -142,12 +142,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "RatedPeopleRepository:build:production",
-              "serverTarget": "RatedPeopleRepository:server:production"
+              "browserTarget": "TopBuilderRepository:build:production",
+              "serverTarget": "TopBuilderRepository:server:production"
             },
             "development": {
-              "browserTarget": "RatedPeopleRepository:build:development",
-              "serverTarget": "RatedPeopleRepository:server:development"
+              "browserTarget": "TopBuilderRepository:build:development",
+              "serverTarget": "TopBuilderRepository:server:development"
             }
           },
           "defaultConfiguration": "production"
