@@ -28,6 +28,7 @@ export class OurServicesComponent implements OnInit {
   }
 
   onClick() {
-    // this.router.navigate(['/post-a-job', 2, 4, 1]);
+     this.router.navigate(['/plumber']);
+     
   }
 }

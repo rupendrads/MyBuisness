@@ -4,11 +4,11 @@
 			<h2 class="title">Our Trades and Services</h2>				
 		</div>
 		<div class="row cards-container-wrapper">			
-				<div class="cards-container">
-                    <div class="our-services-card" *ngFor="let tradeperson of filteredTradeperson">
-                        <a class="our-service" href="">{{ tradeperson.Title }}</a> 
-                    </div>					
-				</div>
+			<div class="cards-container">
+				<div class="our-services-card" *ngFor="let tradeperson of filteredTradeperson">
+					<a class="our-service" (click)="onClick()" href="">{{ tradeperson.Title }}</a> 
+				</div>					
+			</div>
 		</div>
 	</form>
 </div>

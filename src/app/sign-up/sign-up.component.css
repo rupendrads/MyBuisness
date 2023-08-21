@@ -1,0 +1,122 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .login-title {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 10px;
+  }
+
+  .title {
+    width: 350px;
+    margin: 4px;
+    padding: 4px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    color: rgb(121, 121, 121);
+    align-items: center;
+  }
+
+  mat-card-title {
+    margin: 4px;
+    padding: 2px;
+    color: rgb(121, 121, 121);
+    align-items: center;
+    font-weight: 500;
+  }
+
+  .login-card {
+    width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px;
+  }
+
+  mat-card-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .container mat-form-field + mat-form-field {
+    margin: 4px 4px;
+  }
+
+  .row-name, .row-detail, .row-select {
+    margin-bottom: 8px;
+  }
+
+  .col-name, .col-detail, .col-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .row-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  button {
+    width: 425px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .msg {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(216, 74, 8);
+  }
+
+  p {
+    font-size: 14px;
+    color: rgb(121, 121, 121);
+    align-items: center;
+    margin: 8px 0px;
+  }
+
+  .note {
+    font-weight: 600;
+  }
+
+  span {
+    color: rgb(233, 80, 10);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  #symbol-phone {
+    color: rgb(233, 80, 10);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  mat-divider {
+    margin-top: 10px;
+    color: rgb(121, 121, 121);
+  }
+  
