@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;      
+    flex-direction: column;      
   }
 
   .our-service {
@@ -50,4 +50,30 @@
 
   .our-service:hover{
     text-decoration: underline;
+  }
+
+  .service-with-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    margin-bottom: 10px;
+  }
+
+  .service-with-image > .service-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    width:50px;
+    height: 50px;
+    border-radius: 25px;
+    border-color: lightgray;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
   }

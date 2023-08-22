@@ -6,7 +6,22 @@
 		<div class="row cards-container-wrapper">			
 			<div class="cards-container">
 				<div class="our-services-card" *ngFor="let tradeperson of filteredTradeperson">
-					<a class="our-service" [routerLink]="['/plumber']">{{ tradeperson.Title }}</a> 
+					<div class="service-with-image">
+						<div class="service-image">
+							<img mat-card-image src="../../assets/Images/PopularJobs/Carpenter.png" alt="Built-In Furniture">
+						</div>
+						<div>
+							<a class="our-service" [routerLink]="['/plumber']">{{ tradeperson.Title }}</a> 
+						</div>
+					</div>
+					<div class="service-with-image">
+						<div class="service-image">
+							<img mat-card-image src="../../assets/Images/PopularJobs/Carpenter.png" alt="Built-In Furniture">
+						</div>
+						<div>
+							<a class="our-service" [routerLink]="['/plumber']">{{ tradeperson.Title }}</a> 
+						</div>
+					</div>
 				</div>					
 			</div>
 		</div>
