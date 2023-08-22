@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run RatedPeopleRepository:serve-ssr",
-    "serve:ssr": "node dist/RatedPeopleRepository/server/main.js",
-    "build:ssr": "ng build && ng run RatedPeopleRepository:server",
-    "prerender": "ng run RatedPeopleRepository:prerender"
+    "dev:ssr": "ng run TopBuilderRepository:serve-ssr",
+    "serve:ssr": "node dist/TopBuilderRepository/server/main.js",
+    "build:ssr": "ng build && ng run TopBuilderRepository:server",
+    "prerender": "ng run TopBuilderRepository:prerender"
   },
   "private": true,
   "dependencies": {

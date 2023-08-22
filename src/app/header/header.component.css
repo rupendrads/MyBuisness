@@ -2,7 +2,7 @@
 
 
 .navbar-header {
-    width: 100%;
+    width: 100vw;
     height: 50px;
     margin-bottom: 15px;
     background-color: aquamarine;
@@ -21,8 +21,8 @@ button:focus,
 
 .menu_wrapper {
   background-color: aliceblue;
-  padding: 0px 0px;
-  margin: 0px -60px;
+  /* padding: 0px 0px;
+  margin: 0px 0px; */
 }
   
 .menu_wrapper .navbar-brand {
