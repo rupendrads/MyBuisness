@@ -1,8 +1,7 @@
-.container {
+.flex-container {
     width: 100%;
     height: auto;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     margin-top: 15px;
@@ -38,29 +37,27 @@
   } */
 
   .plumber-card {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
     flex-direction: row;
-    border-radius: 6px;
-    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px;
+    /* border-radius: 6px;
+    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
 
   .card-content {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
     flex-direction: row;
   }
 
   .col-detail {
     display: flex;
-    /* align-items: center; */
-    justify-content: flex-start;
-    flex-direction: column;
-    /* padding: 4px; */
+    justify-content: center;
+    flex-direction: column;    
     padding-left: 12px;
+    width: 900px;
   }
 
   mat-title {
@@ -76,10 +73,8 @@
   
   .card-image {
     display: flex;
-    justify-content: flex-end;
-    margin: 2px 0px;
-    margin-bottom: -20px;
-    margin-right: -10px;
+    justify-content: center;
+    margin-bottom: 20px;    
   }
 
   img {
@@ -121,7 +116,6 @@
 
   .plumber-data {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -134,8 +128,8 @@
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
-    border-radius: 3px;
-    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px;
+    /* border-radius: 3px;
+    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
 
    .plumberdata-content {
@@ -143,6 +137,7 @@
     align-items: center;
     justify-content:flex-start;
     flex-direction: column;
+    width: 900px;
   } 
 
   .row-plumberdata, .row-plumberdatalist {
@@ -150,13 +145,13 @@
   }
 
   .heading {
-    color: black;
-    font-size: 30px;
-    font-weight: 500px;
+    color: rgb(102, 99, 99);
+    font-size: 3.1rem;
+    font-weight: 700px;
   }
 
   mat-subtitle {
-    color: black;
+    color: rgb(102, 99, 99);
     font-size: 20px;
     /* font-weight: 300px; */
   }
@@ -165,4 +160,10 @@
     width: 60%;
   }
  
-  
+  .list-group {
+    border: none;
+  }
+
+  .list-group-item {
+    border: none;
+  }
