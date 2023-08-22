@@ -27,8 +27,8 @@ export class OurServicesComponent implements OnInit {
     );
   }
 
-  onClick() {
-     this.router.navigate(['/plumber']);
+  // onClick() {
+  //    this.router.navigate(['/plumber']);
      
-  }
+  // }
 }
