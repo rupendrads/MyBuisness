@@ -18,29 +18,30 @@
   .row-localplumber {
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     flex-direction: row;
   }
 
-  .col-localplumber {
-    justify-content: flex-end;
+  /* .col-localplumber {
+    justify-content: center;
     
-  }
+  } */
 
   
-  /* mat-card-title {
+   mat-card-title {
     margin: 4px;
     padding: 2px;
     color: rgb(121, 121, 121);
     align-items: center;
     font-weight: 500;
-  } */
+  } 
 
   .plumber-card {
     display: flex;
     align-items: center;
     justify-content:center;
     flex-direction: row;
+    border: none;
     /* border-radius: 6px;
     box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
@@ -57,7 +58,7 @@
     justify-content: center;
     flex-direction: column;    
     padding-left: 12px;
-    width: 900px;
+    width: 800px;
   }
 
   mat-title {
@@ -74,12 +75,25 @@
   .card-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;    
+    margin-bottom: 20px; 
+    border: none;   
+  }
+
+  .card-img {
+    width: 260px;
+    height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(184, 181, 181);
+    border-radius: 3px;
   }
 
   img {
     width: 245px;
     height: 290px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
   } 
 
   p {
@@ -87,15 +101,15 @@
     color: rgb(121, 121, 121);
     display: flex;
     justify-content: flex-start;
-    margin: 2px 2px;
-    padding: 2px 2px;
+    /* margin: 2px 2px;
+    padding: 2px 2px; */
     margin-bottom: 15px;
   }
 
   span {
-    color: rgb(233, 80, 10);
+    color: skyblue;
     font-weight: 600;
-    
+    justify-content: center;
   }
 
   a {
@@ -105,7 +119,7 @@
     justify-content: flex-start;
     text-decoration: none;
     font-stretch:wider;
-    padding-left: 20px;
+    
   }
 
   a:hover {
@@ -128,6 +142,7 @@
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
+    border: none;
     /* border-radius: 3px;
     box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
@@ -156,8 +171,15 @@
     /* font-weight: 300px; */
   }
 
+  ul {
+    margin-left: 0px;
+  }
+
   .list-groupQuotes {
     width: 60%;
+    margin-left: 0px;
+    padding-left: 0px;
+    align-items: flex-start;
   }
  
   .list-group {
@@ -165,5 +187,13 @@
   }
 
   .list-group-item {
+    font-weight: 500px;
+    color: rgb(102, 99, 99);
     border: none;
+    justify-content: center;
+  }
+
+  .bi-circle-fill {
+    font-size: 8px;
+    margin-right: 15px;
   }
