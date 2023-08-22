@@ -5,21 +5,75 @@
 		</div>
 		<div class="row cards-container-wrapper">			
 			<div class="cards-container">
-				<div class="our-services-card" *ngFor="let tradeperson of filteredTradeperson">
-					<div class="service-with-image">
-						<div class="service-image">
-							<img mat-card-image src="../../assets/Images/PopularJobs/Carpenter.png" alt="Built-In Furniture">
+				<div class="our-services-card">
+					<div class="col col-images">
+						<div class="row row-images">
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/plumber.png" alt="Plumber"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Plumber</a> 
+								</div>
+							</div>
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/builder.png" alt="Builder"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Builder</a> 
+								</div>
+							</div>
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/carpenter.png" alt="Carpenter"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Carpenter</a> 
+								</div>
+							</div>
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/painter.png" alt="Painter"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Painter</a> 
+								</div>
+							</div>
 						</div>
-						<div>
-							<a class="our-service" [routerLink]="['/plumber']">{{ tradeperson.Title }}</a> 
-						</div>
-					</div>
-					<div class="service-with-image">
-						<div class="service-image">
-							<img mat-card-image src="../../assets/Images/PopularJobs/Carpenter.png" alt="Built-In Furniture">
-						</div>
-						<div>
-							<a class="our-service" [routerLink]="['/plumber']">{{ tradeperson.Title }}</a> 
+						<div class="row row-images">
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/kitchen.png" alt="Kitchen Specialist"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Kitchen Specialist</a> 
+								</div>
+							</div>
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/electrician.png" alt="Electrician"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Electrician</a> 
+								</div>
+							</div>
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/roofer.png" alt="Roofer"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Roofer</a> 
+								</div>
+							</div>
+							<div class="service-with-image">
+								<div class="service-image">
+									<a [routerLink]="['/plumber']"><img mat-card-image src="../../assets/Images/Trades/cleaner.png" alt="Cleaner"></a>
+								</div>
+								<div>
+									<a class="our-service" [routerLink]="['/plumber']">Cleaner</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>					

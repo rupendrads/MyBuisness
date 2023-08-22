@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .title {
@@ -20,29 +20,48 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 20px;
   }
   
   .cards-container {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10px 5px;
-    max-width:1125px;
+    /* max-width:1125px; */
   }
 
   .our-services-card {
-    width: 335px;    
+    width: 100%;    
     margin: 5px 15px;
     padding: 7px 7x;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;      
+    flex-direction: row;      
+  }
+
+  .col-images {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .row-images {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
   }
 
   .our-service {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 16px;
     color: #636065;
     text-decoration: none;  
@@ -53,6 +72,7 @@
   }
 
   .service-with-image {
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,10 +90,15 @@
     border-radius: 25px;
     border-color: lightgray;
     background-color: white;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   img {
     width: 30px;
     height: 30px;
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 800;
   }
