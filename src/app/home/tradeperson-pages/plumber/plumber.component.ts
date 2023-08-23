@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlumberComponent implements OnInit{
   selectedTrade = 'Builder';
-  selectedEmpno = 'Just Me';
+  selectedJob = 'Just Me';
 
   ngOnInit() {};
 
