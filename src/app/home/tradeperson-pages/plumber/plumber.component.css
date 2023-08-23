@@ -39,7 +39,8 @@
     align-items: center;
     justify-content:center;
     flex-direction: row;
-    border: none;
+    border: none; 
+    border-color: white;
   }
 
   .card-content {
@@ -66,12 +67,16 @@
     align-items: center;
     padding-bottom: 12px;    
   }
+
+  .mat-mdc-card {
+    box-shadow: none;
+  }
   
   .card-image {
     display: flex;
     justify-content: center;
     margin-bottom: 20px; 
-    border: none;   
+    border: none; 
   }
 
   .row-image {
@@ -102,6 +107,8 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 15px;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   span {
@@ -151,6 +158,9 @@
     justify-content:flex-start;
     flex-direction: column;
     width: 900px;
+    box-shadow: 5px 5px 3px lightgray; 
+    border: 1px solid lightgray;
+    border-radius: 3px;
   } 
 
   .row-plumberdata, .row-plumberdatalist {
@@ -159,13 +169,13 @@
 
   .heading {
     color: #333;
-    font-size: 3rem;
-    font-weight: 700px;
+    font-size: 2rem;
+    font-weight: 500px;
   }
 
   mat-subtitle {
     color: #333;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
   }
 
