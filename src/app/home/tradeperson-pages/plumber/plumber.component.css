@@ -79,28 +79,6 @@
     border: none; 
   }
 
-  .row-image {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: row;
-  }
-
-   .card-img {
-    width: 400px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  img {
-    width: 390px;
-    height: 290px;
-    padding-bottom: 10px;
-    margin: 10px;
-  } 
-
   p {
     font-size: 18px;
     color: #333;
@@ -208,54 +186,91 @@
 
       /* Trade selection dropdown css */
 
+  .row-image {
+    width: 930px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-left: 0px;
+    padding: 0px 0px;
+  }
+
   .container {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 10px 0px;
+    padding-left: 0px;
+    margin-left: 0px;
   }
 
-  .login-form {
-    width: 100%;
+  .login-card {
+    width: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    box-shadow: 5px 5px 3px lightgray; 
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin-left: 0px;
   }
 
-  .title {
-    margin: 2px 2px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-    align-items: center;
-  }
-
-  .sub-title {
-    margin: 2px 2px;
-    font-size: 16px;
+  .login-title {
+    margin: 8px 3px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: .5;
     font-weight: 500;
-    color: #333;
-    align-items: center;
+    color: #646262;
   }
 
-  .container mat-form-field + mat-form-field {
-    margin: 4px 4px;
-  }
-
-  .row-select {
-    margin-bottom: 8px;
+  .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 10px;
   }
 
   .col-select {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  .mat-trade, .mat-job {
+    width: 345px;
+    margin-top: 3px;
+    margin-bottom: 4px;
   }
 
   button {
-    width: 425px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 345px;
+    margin-top: 6px;
+    margin-bottom: 6px;
   }
+
+  .row-image {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+   .card-img {
+    width: 430px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  } 
+
+  img {
+    width: 430px;
+    height: 310px;
+    margin: 10px 0px;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 3px lightgray;
+    border-radius: 3px;
+  } 

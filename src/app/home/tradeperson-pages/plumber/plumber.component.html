@@ -2,21 +2,17 @@
 	<div class="flex-container">
 		<form class="plumber-form">
 			<div class="row row-localplumber">
-				
-						<div class="row col-md-9 row-image">
-							<div class="col col-md-6">
+						<div class="row col-md-12 row-image">
+							<div class="col col-md-5">
 								<div class="container">
-									<form class="col col-sm-12 col-md-12 col-lg-12 login-form">
-										<!-- Title -->
-										<mat-title class="title">
-											Post your job for free. Get quotes. Read reviews.
-										</mat-title>
-										<mat-subtitle class="sub-title">How does it work?</mat-subtitle>
+									<form class="col col-sm-12 col-md-12 col-lg-12 login-form">	
 										<mat-card class="login-card">
 											<mat-card-content>
-												<div class="row row-select">
+												<mat-title class="login-title">
+													Post your job for free. Get quotes. Read reviews.
+												</mat-title>
 													<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-select">
-														<label for="tradeperson" class="row-form-label">What type of tradeperson do you need?</label>
+														<label for="tradeperson" class="form-label">What type of tradeperson do you need?</label>
 														<mat-form-field class="mat-trade">
 															<mat-label>Select your trade</mat-label>
 															<mat-select [(value)]="selectedTrade">
@@ -26,32 +22,28 @@
 															</mat-select>
 														</mat-form-field>
 
-														<label for="job" class="row-form-label">What type of job is it?</label>
-														<mat-form-field class="mat-employees">
+														<label for="job" class="form-label">What type of job is it?</label>
+														<mat-form-field class="mat-job">
 															<mat-label>Please select job</mat-label>
-															<mat-select [(value)]="selectedEmpno">
-																<mat-option value="Just me">Just me</mat-option>
-																<mat-option value="2-5">2-5</mat-option>
-																<mat-option value="6-10">6-10</mat-option>
-																<mat-option value="10+">10+</mat-option>
+															<mat-select [(value)]="selectedJob">
+																<mat-option value="Bathroom Design">Bathroom Design</mat-option>
+																<mat-option value="Bathroom Repair">Bathroom Repair</mat-option>
+																<mat-option value="Bathroom Tiling">Bathroom Tiling</mat-option>
 															</mat-select>
 														</mat-form-field>
 													</div>
-												</div>
-								
 												
 												<div class="col-sm-12 col-md-12 col-lg-12 login-button">
-													<button mat-raised-button color="primary">Get Started</button>
+													<button mat-raised-button color="primary">NEXT STEP ></button>
 												</div>
 											</mat-card-content>
 										</mat-card>
 									</form>
 								</div>
 							</div>
-							<div class="col col-md-6 card-img">
+							<div class="col offset-md-1 col-md-6 card-img">
 								<img mat-card-image src="../../assets/Images/tpPages/plumbing-work.jpg" alt="Plumber">
 							</div>
-							
 						</div>
 
 						<div class="card-image">
