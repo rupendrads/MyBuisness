@@ -63,11 +63,12 @@
     background-color: #f0f0f0;
     transition: transform 0.3s, margin-top 0.3s;
     cursor: pointer;
+    box-shadow: 5px 5px 3px lightgray;
   }
   
   .pjobs-card:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px;
+    box-shadow: lightgray(235, 168, 137, 0.4) 0px 0px 0px 2px, lightgray(231, 182, 158, 0.65) 0px 4px 6px -1px, lightgray(255, 255, 255, 0.09) 0px 2px .5px;
   }
 
   img {

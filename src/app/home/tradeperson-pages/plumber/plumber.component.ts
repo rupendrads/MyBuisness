@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./plumber.component.css']
 })
 export class PlumberComponent implements OnInit{
+  selectedTrade = 'Builder';
+  selectedEmpno = 'Just Me';
 
   ngOnInit() {};
 
