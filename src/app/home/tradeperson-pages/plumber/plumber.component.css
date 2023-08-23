@@ -1,3 +1,7 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .flex-container {
     width: 100%;
     height: auto;
@@ -21,17 +25,11 @@
     justify-content:center;
     flex-direction: row;
   }
-
-  /* .col-localplumber {
-    justify-content: center;
-    
-  } */
-
   
    mat-card-title {
     margin: 4px;
     padding: 2px;
-    color: rgb(121, 121, 121);
+    color: #333;
     align-items: center;
     font-weight: 500;
   } 
@@ -42,8 +40,6 @@
     justify-content:center;
     flex-direction: row;
     border: none;
-    /* border-radius: 6px;
-    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
 
   .card-content {
@@ -66,10 +62,9 @@
     margin: 2px 0px;
     font-size: 26px;
     font-weight: 700;
-    color: rgb(102, 99, 99);
+    color: #333;
     align-items: center;
     padding-bottom: 12px;    
-   
   }
   
   .card-image {
@@ -79,35 +74,40 @@
     border: none;   
   }
 
-  .card-img {
-    width: 260px;
-    height: 290px;
+  .row-image {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+   .card-img {
+    width: 400px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(184, 181, 181);
-    border-radius: 3px;
-  }
+  } 
 
   img {
-    width: 245px;
+    width: 390px;
     height: 290px;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
   } 
 
   p {
     font-size: 18px;
-    color: rgb(121, 121, 121);
+    color: #333;
     display: flex;
     justify-content: flex-start;
-    /* margin: 2px 2px;
-    padding: 2px 2px; */
     margin-bottom: 15px;
   }
 
   span {
-    color: skyblue;
+    /* color: skyblue; */
+    /* color: #C3D4F2; */
+    color: #87a9e2;
     font-weight: 600;
     justify-content: center;
   }
@@ -118,15 +118,14 @@
     display: flex;
     justify-content: flex-start;
     text-decoration: none;
-    font-stretch:wider;
-    
+    font-stretch:wider; 
   }
 
   a:hover {
     text-decoration: underline;
   }
   
-    /* Plumber data css code */
+          /* Plumber data css code */
 
   .plumber-data {
     width: 100%;
@@ -143,8 +142,7 @@
     justify-content:flex-start;
     flex-direction: column;
     border: none;
-    /* border-radius: 3px;
-    box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
+    /* box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
 
    .plumberdata-content {
@@ -160,15 +158,15 @@
   }
 
   .heading {
-    color: rgb(102, 99, 99);
-    font-size: 3.1rem;
+    color: #333;
+    font-size: 3rem;
     font-weight: 700px;
   }
 
   mat-subtitle {
-    color: rgb(102, 99, 99);
+    color: #333;
     font-size: 20px;
-    /* font-weight: 300px; */
+    font-family: 'Open Sans', sans-serif;
   }
 
   ul {
@@ -188,7 +186,7 @@
 
   .list-group-item {
     font-weight: 500px;
-    color: rgb(102, 99, 99);
+    color: #333;
     border: none;
     justify-content: center;
   }
@@ -196,4 +194,58 @@
   .bi-circle-fill {
     font-size: 8px;
     margin-right: 15px;
+  }
+
+      /* Trade selection dropdown css */
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .title {
+    margin: 2px 2px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    align-items: center;
+  }
+
+  .sub-title {
+    margin: 2px 2px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    align-items: center;
+  }
+
+  .container mat-form-field + mat-form-field {
+    margin: 4px 4px;
+  }
+
+  .row-select {
+    margin-bottom: 8px;
+  }
+
+  .col-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  button {
+    width: 425px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
