@@ -38,6 +38,8 @@ import { FileUploadComponent } from './post-a-job/common/fileUpload/file-upload.
 import { OurServicesComponent } from './home/our-services/our-services.component';
 import { FooterComponent } from './footer/footer.component';
 import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.component';
+import { ElectricianComponent } from './home/tradeperson-pages/electrician/electrician.component';
+import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.compo
     FileUploadComponent,
     OurServicesComponent,
     FooterComponent,
-    PlumberComponent
+    PlumberComponent,
+    ElectricianComponent,
+    CarpenterComponent
   ],
   imports: [
     BrowserModule,
