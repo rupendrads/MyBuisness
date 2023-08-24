@@ -235,45 +235,6 @@
     margin-left: 0px;
   }
 
-  .login-card {
-    width: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 5px 5px 3px lightgray; 
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    margin-left: 0px;
-  }
-
-  .login-title {
-    margin: 8px 3px;
-    margin-bottom: 12px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #646262;
-    padding-left: 0px;
-  }
-
-  .form-label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 0px;
-    margin-top: 10px;
-  }
-
-  .col-select {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .mat-trade, .mat-job {
-    width: 345px;
-    margin-top: 3px;
-    margin-bottom: 4px;
-  }
-
   button {
     width: 345px;
     margin-top: 6px;
