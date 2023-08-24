@@ -38,6 +38,7 @@ import { FileUploadComponent } from './post-a-job/common/fileUpload/file-upload.
 import { OurServicesComponent } from './home/our-services/our-services.component';
 import { FooterComponent } from './footer/footer.component';
 import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.component';
+import { FindTradePersonComponent } from './home/our-services/find-tradeperson/find-tradeperson.component';
 import { ElectricianComponent } from './home/tradeperson-pages/electrician/electrician.component';
 import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter.component';
 
@@ -63,6 +64,7 @@ import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter
     OurServicesComponent,
     FooterComponent,
     PlumberComponent,
+    FindTradePersonComponent,
     ElectricianComponent,
     CarpenterComponent
   ],
