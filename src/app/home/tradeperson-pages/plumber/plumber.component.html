@@ -2,33 +2,32 @@
 	<div class="flex-container">
 		<form class="plumber-form">
 			<div class="row row-localplumber">
-						<div class="row col-md-12 row-image">
-							<div class="col col-md-5">
-								<div class="container">
-									<form class="col col-sm-12 col-md-12 col-lg-12 login-form">	
+						<div class="row-image">
+							<div class="col login-card-wrapper">
+									<form class="col col-sm-12 col-md-12 col-lg-12 login-form" (ngSubmit)="onSubmit()" #myForm="ngForm">	
 										<mat-card class="login-card">
 											<mat-card-content>
-												<mat-title class="login-title">
-													Post your job for free. Get quotes. Read reviews.
-												</mat-title>
+												<div>
+													<mat-title>
+														<div class="login-title">
+															Post your job for free. Get quotes. Read reviews.
+														</div>
+													</mat-title>
+												</div>
 													<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-select">
 														<label for="tradeperson" class="form-label">What type of tradeperson do you need?</label>
 														<mat-form-field class="mat-trade">
 															<mat-label>Select your trade</mat-label>
-															<mat-select [(value)]="selectedTrade">
-																<mat-option value="Bathroom Fitter">Bathroom Fitter</mat-option>
-																<mat-option value="Builder">Builder</mat-option>
-																<mat-option value="Carpenter">Carpenter</mat-option>
+															<mat-select [(ngModel)]="selectedTradeperson" (selectionChange)="onTradepersonSelect($event)">
+																<mat-option *ngFor="let tradeperson of filteredTradeperson" [value]="tradeperson.Id">{{tradeperson.Title}}</mat-option>																
 															</mat-select>
 														</mat-form-field>
 
 														<label for="job" class="form-label">What type of job is it?</label>
 														<mat-form-field class="mat-job">
 															<mat-label>Please select job</mat-label>
-															<mat-select [(value)]="selectedJob">
-																<mat-option value="Bathroom Design">Bathroom Design</mat-option>
-																<mat-option value="Bathroom Repair">Bathroom Repair</mat-option>
-																<mat-option value="Bathroom Tiling">Bathroom Tiling</mat-option>
+															<mat-select [(ngModel)]="selectedJob" (selectionChange)="onJobSelect($event)">
+																<mat-option *ngFor="let job of filteredJob" [value]="job.Id">{{job.Title}}</mat-option>																
 															</mat-select>
 														</mat-form-field>
 													</div>
@@ -39,16 +38,14 @@
 											</mat-card-content>
 										</mat-card>
 									</form>
-								</div>
 							</div>
-							<div class="col offset-md-1 col-md-6 card-img">
-								<img mat-card-image src="../../assets/Images/tpPages/plumbing-work.jpg" alt="Plumber">
+							<div class="col card-img-wrapper">
+								<img class="card-img" mat-card-image src="../../assets/Images/tpPages/plumbing-work.jpg" alt="Plumber">
 							</div>
 						</div>
 
 						<div class="card-image">
 							<div class="plumber-data">
-								<div class="col-dataplumber">
 									<mat-card class="plumber-card">
 										<mat-card-content class="plumberdata-content">
 											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row row-plumberdata">
@@ -159,7 +156,6 @@
 											</div>
 										</mat-card-content>
 									</mat-card>
-								</div>
 							</div>	
 						</div>			
 				</div>
