@@ -37,10 +37,15 @@ import { JobTermsComponent } from './post-a-job/screen/static/job-terms.componen
 import { FileUploadComponent } from './post-a-job/common/fileUpload/file-upload.component';
 import { OurServicesComponent } from './home/our-services/our-services.component';
 import { FooterComponent } from './footer/footer.component';
-import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.component';
 import { FindTradePersonComponent } from './home/our-services/find-tradeperson/find-tradeperson.component';
+import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.component';
 import { ElectricianComponent } from './home/tradeperson-pages/electrician/electrician.component';
 import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter.component';
+import { BuilderComponent } from './home/tradeperson-pages/builder/builder.component';
+import { PainterComponent } from './home/tradeperson-pages/painter/painter.component';
+import { KitchenSpecialistComponent } from './home/tradeperson-pages/kitchen specialist/kitchenSpecialist.component';
+import { RooferComponent } from './home/tradeperson-pages/roofer/roofer.component';
+import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.component';
 
 @NgModule({
   declarations: [
@@ -63,10 +68,15 @@ import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter
     FileUploadComponent,
     OurServicesComponent,
     FooterComponent,
-    PlumberComponent,
     FindTradePersonComponent,
+    PlumberComponent,
     ElectricianComponent,
-    CarpenterComponent
+    CarpenterComponent,
+    BuilderComponent,
+    PainterComponent,
+    KitchenSpecialistComponent,
+    RooferComponent,
+    CleanerComponent
   ],
   imports: [
     BrowserModule,
