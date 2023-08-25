@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./electrician.component.css']
 })
 export class ElectricianComponent implements OnInit{
-  selectedTrade = 'Builder';
-  selectedJob = 'Just Me';
-
   ngOnInit() {};
 
   constructor() {};
