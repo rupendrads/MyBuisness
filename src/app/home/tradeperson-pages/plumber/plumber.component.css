@@ -113,7 +113,6 @@
     margin-top: 10px;
     margin-left: 0px;
     margin-right: 0px;
-    /* border: 1px solid black; */
   }
 
   .plumberdata-card {
@@ -123,7 +122,6 @@
     justify-content:flex-start;
     flex-direction: column;
     border: none;
-    /* box-shadow: rgba(235, 168, 137, 0.4) 0px 0px 0px 2px, rgba(231, 182, 158, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.09) 0px 2px .5px; */
   }
 
    .plumberdata-content {
@@ -191,7 +189,6 @@
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 0px 0px;
-    /* border: 1px solid red; */
   }
 
   .card-image {
@@ -200,8 +197,7 @@
     justify-content: center;
     padding-left: 0px;
     padding-right: 0px;
-    margin-bottom: 20px; 
-    /* border: 1px solid blue; */
+    margin-bottom: 20px;
   }
 
   .card-img-wrapper {
@@ -210,12 +206,9 @@
     justify-content: flex-end;
     align-items: center;
     border-radius: 5px;
-    /* border: 1px solid blue; */
   }
 
   .card-img {
-    /* width: 430px; */
-    /* height: 310px;     */
     height: 100%;
     width: 100%;
   }
