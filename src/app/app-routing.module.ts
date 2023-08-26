@@ -5,12 +5,22 @@ import { HomeComponent } from './home/home.component';
 import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.component'
 import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter.component';
 import { ElectricianComponent } from './home/tradeperson-pages/electrician/electrician.component';
+import { PainterComponent } from './home/tradeperson-pages/painter/painter.component';
+import { KitchenSpecialistComponent } from './home/tradeperson-pages/kitchen specialist/kitchenSpecialist.component';
+import { RooferComponent } from './home/tradeperson-pages/roofer/roofer.component';
+import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.component';
+import { BuilderComponent } from './home/tradeperson-pages/builder/builder.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'plumber', component: PlumberComponent },
   { path: 'carpenter', component: CarpenterComponent },
   { path: 'electrician', component: ElectricianComponent },
+  { path: 'builder', component: BuilderComponent },
+  { path: 'painter', component: PainterComponent },
+  { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
+  { path: 'roofer', component: RooferComponent  },
+  { path: 'cleaner', component: CleanerComponent },
   { path: 'post-a-job/:selectedTradepersonId/:selectedJobId/:startQuestionId', component: PostJobComponent }
 ];
 

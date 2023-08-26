@@ -97,7 +97,7 @@
 
   .service-image:hover {
     background-color: #87a9e2;
-    box-shadow: #032052(17, 17, 26, 0.5) 0px 4px 8px, #032052(17, 17, 26, 0.1) 0px 8px 16px;
+    box-shadow: #032052(17, 17, 26, 0.5) 0px 8px 16px, #032052(17, 17, 26, 0.1) 0px 16px 32px;
   }
 
   img {
