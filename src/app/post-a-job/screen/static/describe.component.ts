@@ -12,6 +12,7 @@ export class DescribeComponent implements OnInit, OnDestroy, AfterViewInit{
   @Output() optionChanged = new EventEmitter<number>();
   jobDescriptionFormControl = new FormControl('', [Validators.required]);
   matcher = new MyErrorStateMatcher();
+  textareaRows: number = 6;
 
   constructor(private jobPostService: JobPostService){}
 

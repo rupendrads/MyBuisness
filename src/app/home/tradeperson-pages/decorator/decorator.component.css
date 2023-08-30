@@ -11,7 +11,7 @@
     margin-top: 15px;
   }
 
-  .roofer-form {
+  .decorator-form {
     width: 100%;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
     flex-direction: column;
   }
 
-  .row-localroofer {
+  .row-localdecorator {
     width: 100%;
     display: flex;
     justify-content:center;
@@ -34,7 +34,7 @@
     font-weight: 500;
   } 
 
-  .roofer-card {
+  .decorator-card {
     display: flex;
     align-items: center;
     justify-content:center;
@@ -103,9 +103,9 @@
     text-decoration: underline;
   }
   
-          /* Plumber data css code */
+          /* Decorator data css code */
 
-  .roofer-data {
+  .decorator-data {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -115,7 +115,7 @@
     margin-right: 0px;
   }
 
-  .rooferdata-card {
+  .decoratordata-card {
     width: 100%;
     height: auto;
     display: flex;
@@ -124,7 +124,7 @@
     border: none;
   }
 
-   .rooferdata-content {
+   .decoratordata-content {
     display: flex;
     align-items: center;
     justify-content:flex-start;
@@ -135,7 +135,7 @@
     border-radius: 3px;
   } 
 
-  .row-rooferdata, .row-rooferdatalist {
+  .row-decoratordata, .row-decoratordatalist {
     width: 100%;
   }
 

@@ -22,6 +22,7 @@ export class FindTradePersonComponent implements OnInit{
   selectedJob: TradepersonJob | undefined;
   selectedJobId: number | any;
   startQuestionId: number | undefined;
+  // selectedTrade: number | string = 1;
 
   constructor(private router: Router) {};
 

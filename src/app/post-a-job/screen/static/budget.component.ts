@@ -8,7 +8,7 @@ import { JobPostService } from '../../services/jobPost.service';
 })
 export class BudgetComponent implements OnInit, OnDestroy, AfterViewInit{    
     @Output() optionChanged = new EventEmitter<number>();
-    selectedBudget = '250';
+    selectedBudget = '250'; 
 
     constructor(private jobPostService: JobPostService){}
   

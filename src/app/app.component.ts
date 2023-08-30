@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Meta ,Title} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'RatedPeople';
+  
+  constructor(private meta: Meta, private titleService: Title) {
+    this.titleService.setTitle('Top builder near me');
+    this.meta.addTag({
+      name: 'Top builder near me',
+      content : 'Top Builders Near Me. Quickly connect with the best builders companies in your area.'})
+  }     
 }
