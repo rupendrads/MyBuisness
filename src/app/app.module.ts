@@ -42,7 +42,7 @@ import { PlumberComponent } from './home/tradeperson-pages/plumber/plumber.compo
 import { ElectricianComponent } from './home/tradeperson-pages/electrician/electrician.component';
 import { CarpenterComponent } from './home/tradeperson-pages/carpenter/carpenter.component';
 import { BuilderComponent } from './home/tradeperson-pages/builder/builder.component';
-import { PainterComponent } from './home/tradeperson-pages/painter/painter.component';
+import { DecoratorComponent } from './home/tradeperson-pages/decorator/decorator.component'; 
 import { KitchenSpecialistComponent } from './home/tradeperson-pages/kitchen specialist/kitchenSpecialist.component';
 import { RooferComponent } from './home/tradeperson-pages/roofer/roofer.component';
 import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.component';
@@ -73,7 +73,7 @@ import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.compo
     ElectricianComponent,
     CarpenterComponent,
     BuilderComponent,
-    PainterComponent,
+    DecoratorComponent,
     KitchenSpecialistComponent,
     RooferComponent,
     CleanerComponent
