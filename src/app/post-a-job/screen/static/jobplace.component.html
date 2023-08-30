@@ -2,14 +2,24 @@
 	<form class="jobplace-form">			
 		<div class="row row-jobplace">			
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-postcode">
-				<mat-form-field class="mat-postcode">
-					<mat-label>Postcode</mat-label>
-					<input matInput placeholder="Enter your post code" [formControl]="jobPlaceFormControl">		
+				<!-- <mat-form-field class="mat-postcode"> -->
+					<!-- <mat-label>Postcode</mat-label>
+					<input #input (keydown)="handleKeyDown($event)" (focus)="handleFocus()" id="txt_search" type="text" placeholder="Enter your post code" [formControl]="jobPlaceFormControl">		
 					<span class="material-symbols-outlined" id="symbol-postcode">location_on</span>
+					<ul id="suggestion_list" #suggestionlist></ul>
+					<mat-error *ngIf="jobPlaceFormControl.hasError('required')">
+						Postcode is <strong>required</strong>
+					</mat-error> -->
+				<!-- </mat-form-field> -->
+				<div class="autocomplete_wrap">
+					<mat-label>Postcode</mat-label>					
+					<input #input (keydown)="handleKeyDown($event)" (focus)="handleFocus()" id="txt_search" type="text" placeholder="Enter your post code" [formControl]="jobPlaceFormControl">		
+					<span class="material-symbols-outlined" id="symbol-postcode">location_on</span>
+					<ul id="suggestion_list" #suggestionlist></ul>
 					<mat-error *ngIf="jobPlaceFormControl.hasError('required')">
 						Postcode is <strong>required</strong>
 					</mat-error>
-				</mat-form-field>
+				</div>
 			</div>
 			<div class="col-md-6 col-message">
 				<span class="material-symbols-outlined">arrow_left</span>

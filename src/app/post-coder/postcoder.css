@@ -1,0 +1,122 @@
+input, select {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	height: 40px;
+	margin-bottom: 0.5em;
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgray;
+}
+
+.search_wrap {
+	overflow: hidden;
+}
+
+.search_wrap div {
+	font-size: 0.75em;
+}
+
+button {
+	padding: 8px;
+	margin-left: 0.5em;
+	float:  right;
+	font-family: sans-serif;
+}
+
+label {
+	display: block;
+	margin-top: 1.25em;
+	margin-bottom: 0.25em;
+}
+select {
+	position: relative;
+	z-index: 1;
+	padding-right: 40px;
+}
+
+.isvalid:after {
+	content: '\2713';
+	color: green;
+}
+
+.notvalid:after {
+	content: '\2717';
+    color: red;
+}   
+
+#successindicator {
+	float:  right;
+	margin-left: 0.5em;
+	display: flex;
+  	justify-content: center;
+  	align-content: center;
+  	flex-direction: column;
+  	height: 40px;
+}
+
+#json_result_container {
+	margin: 5em 0 0;
+    background-color: #eee;
+	color: #333;
+    /* border: solid lightgrey 1px; */
+	padding: 1em;
+	overflow: auto;
+}
+
+#autocomplete_wrap{
+	position: relative;
+}
+
+#suggestion_list{
+	position:  absolute;
+	background-color: #fff;
+	outline: -webkit-focus-ring-color auto 1px;
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	max-height:  400px;
+  	overflow-y: auto;
+}
+
+#suggestion_list li{
+	cursor: pointer;
+	padding: 10px 5px;
+}
+
+#suggestion_list li.header{
+	border-bottom: 2px solid #ddd;
+}
+
+#suggestion_list li:hover, #suggestion_list li.selected{
+	background-color: #ddd;
+}
+
+#suggestion_list li span.location{
+	font-size: 0.75em;
+	color: #666;
+}
+
+.arrow {
+ 	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+}
+
+.left {
+	margin-left: 3px;
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.address{
+	height: 140px;
+	margin: 8px;
+}
+
+.map {
+	height: 300px;
+	width: 100%;
+}
