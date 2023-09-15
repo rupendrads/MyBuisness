@@ -84,8 +84,8 @@ button:focus,
   color: #827e94;
 }
 
-.btn {
-  background-color: rgb(233, 80, 10);
+.join-button {
+  border-radius: 10px;
 }
 
 

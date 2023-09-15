@@ -46,6 +46,8 @@ import { DecoratorComponent } from './home/tradeperson-pages/decorator/decorator
 import { KitchenSpecialistComponent } from './home/tradeperson-pages/kitchen specialist/kitchenSpecialist.component';
 import { RooferComponent } from './home/tradeperson-pages/roofer/roofer.component';
 import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.component';
+import { TraderServicesComponent } from './trader-services/trader-services.component';
+import { TraderLocationComponent } from './trader-location/trader-location.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.compo
     DecoratorComponent,
     KitchenSpecialistComponent,
     RooferComponent,
-    CleanerComponent
+    CleanerComponent,
+    TraderServicesComponent,
+    TraderLocationComponent
   ],
   imports: [
     BrowserModule,

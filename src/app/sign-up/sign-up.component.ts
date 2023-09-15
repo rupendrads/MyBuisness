@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +12,7 @@ export class SignUpComponent {
   selectedTrade = 'Builder';
   selectedEmpno = 'Just Me';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -25,5 +26,9 @@ export class SignUpComponent {
   login() {
     // Add your login logic here
     console.log('Logging in...');
+  }
+
+  startRegistration(){
+    this.router.navigate(['/traderservices']);
   }
 }
