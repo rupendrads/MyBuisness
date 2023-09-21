@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-trader-services',
@@ -8,6 +9,8 @@ import { Component, OnInit } from "@angular/core";
 export class TraderServicesComponent implements OnInit {
     selectedService:any;
     selectedServices:any[] = [];
+
+    constructor(private router: Router){}
     
     ngOnInit(): void {    
         
@@ -18,5 +21,9 @@ export class TraderServicesComponent implements OnInit {
             this.selectedServices.push(this.selectedService);
         }
         console.log(this.selectedServices);
+    }
+
+    next(){
+        this.router.navigate(['/traderlocation']);
     }
 }

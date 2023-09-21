@@ -19,6 +19,13 @@
     align-content: center;    
 }
 
+.service-display {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 .add-button-div {
 
 }
