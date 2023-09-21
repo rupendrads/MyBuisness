@@ -1,42 +1,41 @@
-<div class="container">
-	<form class="col col-sm-12 col-md-12 col-lg-12 login-form">
-		<!-- Title -->
-		<div class="login-title">
-			<div class="title">Tradeperson Log-in</div>	
-		</div>
+<div class="container signup-form">
+	<form class="col">		
 		<mat-card class="login-card">
+			
 			<mat-card-content>
-				<div class="row row-name">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-name">
+				<div class="login-title">
+					<div class="title">Sign Up</div>	
+				</div>
+				<div class="row">
 						<mat-form-field class="mat-fname">
 							<mat-label>First Name</mat-label>
 							<input matInput placeholder="Enter your first name" formControlName="firstName">	
-						</mat-form-field>
-						<mat-form-field class="mat-lname">
-							<mat-label>Last Name</mat-label>
-							<input matInput placeholder="Enter your last name" formControlName="lastName">	
-						</mat-form-field>
-					</div>
+						</mat-form-field>						
 				</div>
-
-				<div class="row row-detail">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-detail">
-						<mat-form-field class="mat-email">
-							<mat-label>Email Address</mat-label>
+				<div class="row">
+					<mat-form-field>
+						<mat-label>Last Name</mat-label>
+						<input matInput placeholder="Enter your last name" formControlName="lastName">	
+					</mat-form-field>
+				</div>
+				<div class="row">
+					<mat-form-field>
+						<mat-label>Email Address</mat-label>
 							<input matInput placeholder="pat@example.com" [formControl]="email" required>
-							<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-						</mat-form-field>
-						<mat-form-field class="mat-phone">
-							<mat-label>Mobile No</mat-label>
-								<div class="row-phone">
-									<input matInput placeholder="Enter your mobile no" formControlName="mobile">	
-									<span class="material-symbols-outlined" id="symbol-phone">phone</span>
-								</div>
-						</mat-form-field>
-					</div>
+						<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="row">
+					<mat-form-field class="mat-phone">
+						<mat-label>Mobile No</mat-label>
+						<div class="row-phone">
+							<input matInput placeholder="Enter your mobile no" formControlName="mobile">	
+							<span class="material-symbols-outlined" id="symbol-phone">phone</span>
+						</div>
+					</mat-form-field>
 				</div>
 
-				<div class="row row-select">
+				<!-- <div class="row row-select">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-select">
 						<mat-form-field class="mat-trade">
 							<mat-label>Select your trade</mat-label>
@@ -56,11 +55,11 @@
 							</mat-select>
 						</mat-form-field>
 					</div>
-				</div>
+				</div> -->
 
 				
 				<div class="col-sm-12 col-md-12 col-lg-12 login-button">
-					<button mat-raised-button color="primary">Get Started</button>
+					<button mat-raised-button color="primary" (click)="startRegistration()">Get Started</button>
 				</div>
 					<mat-divider></mat-divider>
 				

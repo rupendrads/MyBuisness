@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="page">
+        <div class="box">
+            <div class="service-select">
+                <div class="select-div">
+                    <mat-form-field style="margin-bottom: -1.25em;">
+                        <mat-label>Service</mat-label>
+                        <mat-select [(value)]="selectedService">
+                            <mat-option value="Bathroom Fitter">Bathroom Fitter</mat-option>
+                            <mat-option value="Builder">Builder</mat-option>
+                            <mat-option value="Carpenter">Carpenter</mat-option>
+                        </mat-select>
+                    </mat-form-field>                
+                </div>
+                <div class="add-button-div">
+                    <button class="btn btn-primary btn-submit add-button" (click)="addService()">Add</button>	
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h6>selected services</h6>
+                </div>
+                <div class="card-body">                         
+                    <dl class="dl-horizontal" *ngFor="let service of selectedServices; let last = last">                    
+                        <dd>{{service}}</dd> 
+                        <mat-divider *ngIf="!last"></mat-divider>                   
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

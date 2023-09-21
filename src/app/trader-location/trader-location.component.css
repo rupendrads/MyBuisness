@@ -1,0 +1,51 @@
+.page {
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.box > div {
+    margin-bottom: 15px;
+}
+
+label {
+    color: gray;
+    font-weight: bold;
+}
+
+.select-div {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;    
+}
+
+.miles-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.from-div {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.next-button-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    width: 80px;
+    margin-top: 10px;
+}

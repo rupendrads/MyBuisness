@@ -10,30 +10,29 @@ import { KitchenSpecialistComponent } from './home/tradeperson-pages/kitchen spe
 import { RooferComponent } from './home/tradeperson-pages/roofer/roofer.component';
 import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.component';
 import { BuilderComponent } from './home/tradeperson-pages/builder/builder.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { TraderServicesComponent } from './trader-services/trader-services.component';
+import { TraderLocationComponent } from './trader-location/trader-location.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'plumber', component: PlumberComponent },
-  { path: 'carpenter', component: CarpenterComponent },
-  { path: 'electrician', component: ElectricianComponent },
-  { path: 'builder', component: BuilderComponent },
-  { path: 'decorator', component: DecoratorComponent },
-  { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
-  { path: 'roofer', component: RooferComponent  },
-  { path: 'cleaner', component: CleanerComponent },
-  // {
-  //   path: '',
-  //   children: [
-  //     { path: 'plumber', component: PlumberComponent },
-  //     { path: 'carpenter', component: CarpenterComponent },
-  //     { path: 'electrician', component: ElectricianComponent },
-  //     { path: 'builder', component: BuilderComponent },
-  //     { path: 'decorator', component: DecoratorComponent },
-  //     { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
-  //     { path: 'roofer', component: RooferComponent  },
-  //     { path: 'cleaner', component: CleanerComponent }
-  //   ], 
-  // },    
+  { path: 'signup', component: SignUpComponent },
+  { path: 'traderservices', component: TraderServicesComponent },
+  { path: 'traderlocation', component: TraderLocationComponent },
+  {
+    path: '',
+    children: [
+      { path: 'plumber', component: PlumberComponent },
+      { path: 'carpenter', component: CarpenterComponent },
+      { path: 'electrician', component: ElectricianComponent },
+      { path: 'builder', component: BuilderComponent },
+      { path: 'decorator', component: DecoratorComponent },
+      { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
+      { path: 'roofer', component: RooferComponent  },
+      { path: 'cleaner', component: CleanerComponent },
+
+    ], 
+  },    
   { path: 'post-a-job/:selectedTradepersonId/:selectedJobId/:startQuestionId', component: PostJobComponent }
 ];
 

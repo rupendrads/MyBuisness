@@ -1,0 +1,32 @@
+<div class="page">
+    <div class="box">
+        <div>
+            <label>I serve customer within</label>
+        </div>
+        <div class="miles-div">
+            <div class="select-div">
+                <mat-form-field style="margin-bottom: -1.25em;">                    
+                    <mat-select [(value)]="selectedMile">
+                        <mat-option value="1">1 mile</mat-option>
+                        <mat-option value="2">2 mile</mat-option>
+                        <mat-option value="5">5 mile</mat-option>
+                        <mat-option value="10">10 mile</mat-option>
+                    </mat-select>
+                </mat-form-field>                
+            </div>
+            <div class="from-div">
+                <span>from</span>
+            </div>
+            <div>
+                <mat-form-field style="margin-bottom: -1.25em;">
+                    <mat-label>Zip code</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="next-button-div">
+            <button class="btn btn-primary btn-submit next-button" (click)="next()">Next</button>	
+        </div>
+    </div>
+</div>
+
