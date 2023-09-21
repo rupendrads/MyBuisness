@@ -13,19 +13,27 @@ import { BuilderComponent } from './home/tradeperson-pages/builder/builder.compo
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {
-    path: '',
-    children: [
-      { path: 'plumber', component: PlumberComponent },
-      { path: 'carpenter', component: CarpenterComponent },
-      { path: 'electrician', component: ElectricianComponent },
-      { path: 'builder', component: BuilderComponent },
-      { path: 'decorator', component: DecoratorComponent },
-      { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
-      { path: 'roofer', component: RooferComponent  },
-      { path: 'cleaner', component: CleanerComponent }
-    ], 
-  },    
+  { path: 'plumber', component: PlumberComponent },
+  { path: 'carpenter', component: CarpenterComponent },
+  { path: 'electrician', component: ElectricianComponent },
+  { path: 'builder', component: BuilderComponent },
+  { path: 'decorator', component: DecoratorComponent },
+  { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
+  { path: 'roofer', component: RooferComponent  },
+  { path: 'cleaner', component: CleanerComponent },
+  // {
+  //   path: '',
+  //   children: [
+  //     { path: 'plumber', component: PlumberComponent },
+  //     { path: 'carpenter', component: CarpenterComponent },
+  //     { path: 'electrician', component: ElectricianComponent },
+  //     { path: 'builder', component: BuilderComponent },
+  //     { path: 'decorator', component: DecoratorComponent },
+  //     { path: 'kitchenspecialist', component: KitchenSpecialistComponent },
+  //     { path: 'roofer', component: RooferComponent  },
+  //     { path: 'cleaner', component: CleanerComponent }
+  //   ], 
+  // },    
   { path: 'post-a-job/:selectedTradepersonId/:selectedJobId/:startQuestionId', component: PostJobComponent }
 ];
 
