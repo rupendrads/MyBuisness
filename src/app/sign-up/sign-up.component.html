@@ -1,5 +1,5 @@
 <div class="container signup-form">
-	<form class="col">		
+	<form class="col" [formGroup]="userForm" (ngSubmit)="startRegistration()">		
 		<mat-card class="login-card">
 			
 			<mat-card-content>
@@ -21,8 +21,8 @@
 				<div class="row">
 					<mat-form-field>
 						<mat-label>Email Address</mat-label>
-							<input matInput placeholder="pat@example.com" [formControl]="email" required>
-						<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+							<input matInput placeholder="pat@example.com" formControlName="email" required>
+						<!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
 					</mat-form-field>
 				</div>
 				<div class="row">
@@ -34,32 +34,9 @@
 						</div>
 					</mat-form-field>
 				</div>
-
-				<!-- <div class="row row-select">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-select">
-						<mat-form-field class="mat-trade">
-							<mat-label>Select your trade</mat-label>
-							<mat-select [(value)]="selectedTrade">
-								<mat-option value="Bathroom Fitter">Bathroom Fitter</mat-option>
-								<mat-option value="Builder">Builder</mat-option>
-								<mat-option value="Carpenter">Carpenter</mat-option>
-							</mat-select>
-						</mat-form-field>
-						<mat-form-field class="mat-employees">
-							<mat-label>No. of employees</mat-label>
-							<mat-select [(value)]="selectedEmpno">
-								<mat-option value="Just me">Just me</mat-option>
-								<mat-option value="2-5">2-5</mat-option>
-								<mat-option value="6-10">6-10</mat-option>
-								<mat-option value="10+">10+</mat-option>
-							</mat-select>
-						</mat-form-field>
-					</div>
-				</div> -->
-
 				
 				<div class="col-sm-12 col-md-12 col-lg-12 login-button">
-					<button mat-raised-button color="primary" (click)="startRegistration()">Get Started</button>
+					<button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">Get Started</button>
 				</div>
 					<mat-divider></mat-divider>
 				

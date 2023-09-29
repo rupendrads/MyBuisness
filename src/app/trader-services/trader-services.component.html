@@ -6,9 +6,9 @@
                     <mat-form-field style="margin-bottom: -1.25em;">
                         <mat-label>Service</mat-label>
                         <mat-select [(value)]="selectedService">
-                            <mat-option value="Bathroom Fitter">Bathroom Fitter</mat-option>
-                            <mat-option value="Builder">Builder</mat-option>
-                            <mat-option value="Carpenter">Carpenter</mat-option>
+                            <mat-option [value]="tradeperson" *ngFor="let tradeperson of filteredTradeperson">
+                                {{ tradeperson.Title }}
+                            </mat-option>                           
                         </mat-select>
                     </mat-form-field>                
                 </div>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="card-body">                         
                         <dl class="dl-horizontal" *ngFor="let service of selectedServices; let last = last">                    
-                            <dd>{{service}}</dd> 
+                            <dd>{{service.Title}}</dd> 
                             <mat-divider *ngIf="!last"></mat-divider>                   
                         </dl>
                     </div>
