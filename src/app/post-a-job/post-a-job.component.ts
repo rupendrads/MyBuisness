@@ -79,8 +79,7 @@ export class PostJobComponent implements OnInit{
     if(optionId){
       this.selectedOptionId = optionId; 
       console.log("In option changed");
-      this.SetQuestionIds();
-      console.log(this.questionIds);
+      
       this.setSelectedOptionIds(optionId);
       console.log(this.questionIds);
       console.log(this.selectedOptionIds);      
@@ -159,6 +158,8 @@ export class PostJobComponent implements OnInit{
 
   goToNextQuestion() {
     if(this.selectedOptionId){      
+      console.log(this.questionIds);
+      
       const selectedQuestionOption = this.questionOptions.find(qo => qo.TradePersonJobId == this.selectedJobId && qo.OptionId == this.selectedOptionId && qo.QuestionId == this.questionId);
 
       console.log(selectedQuestionOption);
@@ -174,7 +175,7 @@ export class PostJobComponent implements OnInit{
             if(this.questionId){
               this.setQuestionTitle(this.questionId);
               this.setQuestionOptions(this.questionId);
-
+              this.SetQuestionIds();
               this.setScreenType();            
               console.log(this.screenType);
               this.setQuestionIndex();
@@ -194,7 +195,7 @@ export class PostJobComponent implements OnInit{
     const questionIdIndex = this.getQuestionIndex();
     if(questionIdIndex > 0){
       previousQuestionId = this.questionIds[questionIdIndex -1];
-    }
+    }    
     return previousQuestionId;
   }
 

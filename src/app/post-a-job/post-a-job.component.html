@@ -1,14 +1,17 @@
 <div class="container">
-	<mat-progress-bar class="progress" mode="determinate" color="accent" [value]="progressValue">
-		<!-- <div class="progress-bar" role="progressbar" aria-label="Example 30px high" style="width: 25%;" [aria-valuenow]="25" aria-valuemin="0" aria-valuemax="100"></div> -->
-	</mat-progress-bar>
+	<div>
+		<mat-progress-bar class="progress" mode="determinate" color="accent" [value]="progressValue">
+			<!-- <div class="progress-bar" role="progressbar" aria-label="Example 30px high" style="width: 25%;" [aria-valuenow]="25" aria-valuemin="0" aria-valuemax="100"></div> -->
+		</mat-progress-bar>
+	</div>
 
-	<app-screen [questionTitle]="questionTitle" [options]="options" [selectedOptionId]="selectedOptionId" 
-	(optionChanged)="optionChanged($event)" [screenType]="screenType"></app-screen>
-		
+	<div>
+		<app-screen [questionTitle]="questionTitle" [options]="options" [selectedOptionId]="selectedOptionId" 
+		(optionChanged)="optionChanged($event)" [screenType]="screenType"></app-screen>
+	</div>		
 	 
 	<div class="button-row">
-		<button mat-fab extended color="primary" (click)="goToPreviousQuestion()" style="margin-right: 10px;" [disabled]="questionIndex == 0">
+		<button mat-fab extended color="primary" (click)="goToPreviousQuestion()" style="margin-right: 10px;" [disabled]="progressValue === 0">
 			Back 
 			<!-- <span class="material-symbols-outlined">arrow_back</span>-->
 		</button>
