@@ -38,7 +38,7 @@
   }
 
   .login-card {
-    width: 460px;
+    width: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,5 +114,10 @@
   mat-divider {
     margin-top: 10px;
     color: rgb(121, 121, 121);
+  }
+
+  .login-button {
+    display: flex;
+    justify-content: center;
   }
   

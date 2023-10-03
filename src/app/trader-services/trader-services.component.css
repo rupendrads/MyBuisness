@@ -1,6 +1,5 @@
 .page {
     padding: 20px;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -11,8 +10,12 @@
     align-items: center;
 }
 
+mat-form-field {
+    width: 410px;
+}
+
 .select-div {
-    width: 250px;
+    width: 450px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -36,7 +39,7 @@
 
 .card {
     margin-top: 10px;
-    width: 210px;
+    width: 410px;
 }
 
 .card-header .card-body {
@@ -53,5 +56,7 @@ dt {
     border: 2px solid lightgray;
     border-radius: 5px;
     background-color: #ffffff;
+    width: 550px;
+    min-height: 200px;
 }
 
