@@ -1,0 +1,29 @@
+<div class="page">
+    <mat-card class="box">
+        <mat-card-content>
+            <div class="about-you-title">
+                <div class="title">About you</div>	
+            </div>
+            <div class="row">
+                <label id="type-radio-group-label">You operate as a:</label>
+                <mat-radio-group
+                    class="type-radio-group"
+                    [(ngModel)]="traderType">
+                    <mat-radio-button class="type-radio-button" *ngFor="let type of traderTypes" [value]="type">
+                        {{type}}
+                    </mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="row">
+                <label class="trading-name-label">Your trading name:</label>
+                <mat-form-field>
+                    <mat-label>Trader name</mat-label>
+                    <input matInput placeholder="Enter your trading name" formControlName="tradingname">	
+                </mat-form-field>
+            </div>
+            <div class="row next-button-div">
+                <button class="btn btn-primary btn-submit next-button" (click)="next()">Next</button>	
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

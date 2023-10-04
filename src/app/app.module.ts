@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import {MatRadioModule} from '@angular/material/radio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +49,7 @@ import { RooferComponent } from './home/tradeperson-pages/roofer/roofer.componen
 import { CleanerComponent } from './home/tradeperson-pages/cleaner/cleaner.component';
 import { TraderServicesComponent } from './trader-services/trader-services.component';
 import { TraderLocationComponent } from './trader-location/trader-location.component';
+import { TraderAboutYouComponent } from './trader-about-you/trader-about-you.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +82,8 @@ import { TraderLocationComponent } from './trader-location/trader-location.compo
     RooferComponent,
     CleanerComponent,
     TraderServicesComponent,
-    TraderLocationComponent
+    TraderLocationComponent,
+    TraderAboutYouComponent
   ],
   imports: [
     BrowserModule,
@@ -100,6 +103,7 @@ import { TraderLocationComponent } from './trader-location/trader-location.compo
     MatSelectModule,
     MatCardModule,
     MatListModule,
+    MatRadioModule
   ],
   providers: [provideClientHydration(),
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],

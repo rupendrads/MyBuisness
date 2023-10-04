@@ -13,12 +13,14 @@ import { BuilderComponent } from './home/tradeperson-pages/builder/builder.compo
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TraderServicesComponent } from './trader-services/trader-services.component';
 import { TraderLocationComponent } from './trader-location/trader-location.component';
+import { TraderAboutYouComponent } from './trader-about-you/trader-about-you.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'traderservices', component: TraderServicesComponent },
   { path: 'traderlocation', component: TraderLocationComponent },
+  { path: 'traderaboutyou', component: TraderAboutYouComponent },
   {
     path: '',
     children: [
