@@ -58,6 +58,7 @@ mat-card-content {
 .next-button-div {
     display: flex;
     justify-content: flex-end;
+    padding-right: 15px;
 }
 
 .next-button {
@@ -67,4 +68,9 @@ mat-card-content {
 
 .trading-name-label {
     margin-bottom: 10px;
+}
+
+.sub-label {
+    font-size: 12px;
+    margin-bottom: 5px;
 }

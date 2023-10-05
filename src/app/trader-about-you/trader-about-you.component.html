@@ -9,7 +9,7 @@
                 <mat-radio-group
                     class="type-radio-group"
                     [(ngModel)]="traderType">
-                    <mat-radio-button class="type-radio-button" *ngFor="let type of traderTypes" [value]="type">
+                    <mat-radio-button class="type-radio-button" *ngFor="let type of traderTypes" [value]="type" (change)="onTraderTypeChanged(type)">
                         {{type}}
                     </mat-radio-button>
                     </mat-radio-group>
@@ -17,8 +17,26 @@
             <div class="row">
                 <label class="trading-name-label">Your trading name:</label>
                 <mat-form-field>
-                    <mat-label>Trader name</mat-label>
-                    <input matInput placeholder="Enter your trading name" formControlName="tradingname">	
+                    <input matInput [(ngModel)]="tradingname">	
+                </mat-form-field>
+            </div>
+            <div class="row" *ngIf="traderType === 'Limited Company' || traderType === 'Limited Partnership'">
+                <label class="trading-name-label">Registered company name:</label>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="registeredcompanyname">	
+                </mat-form-field>
+            </div>
+            <div class="row" *ngIf="traderType === 'Limited Company' || traderType === 'Limited Partnership'">
+                <label class="trading-name-label">Company registration number:</label>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="companyregistrationnumber">	
+                </mat-form-field>
+            </div>
+            <div class="row" *ngIf="traderType === 'Ordinary Partnership'">
+                <label class="trading-name-label">Full names of all partners:</label>
+                <label class="sub-label">Comma-separated list of all names on the partnership agreement, including yourself (e.g. John Smith, Jane Doe)</label>
+                <mat-form-field >
+                    <input matInput [(ngModel)]="partnersnames">	
                 </mat-form-field>
             </div>
             <div class="row next-button-div">
