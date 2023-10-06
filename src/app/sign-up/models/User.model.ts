@@ -1,3 +1,4 @@
+import { TraderAboutYou } from "../../trader-about-you/models/TraderAboutYou.model";
 import { TraderLocation } from "../../trader-location/models/TraderLocation.model";
 import { TraderService } from "../../trader-services/models/TraderService.model";
 
@@ -6,7 +7,8 @@ export interface IUser {
     FirstName: string;
     LastName: string;
     Email: string;
-    Mobile: string; 
+    Mobile: string;
+    TraderAboutYou: TraderAboutYou| undefined; 
     TraderLocation: TraderLocation| undefined;
     TraderServices: TraderService[];   
   }
@@ -17,9 +19,10 @@ export interface IUser {
     LastName: string;
     Email: string;
     Mobile: string;  
+    TraderAboutYou: TraderAboutYou| undefined; 
     TraderLocation: TraderLocation| undefined; 
-    TraderServices: TraderService[] = [];  
-          
+    TraderServices: TraderService[] = [];
+  
     constructor(id: number, firstName: string, lastName: string, email: string, mobile: string) {
       this.Id = id;
       this.FirstName = firstName;

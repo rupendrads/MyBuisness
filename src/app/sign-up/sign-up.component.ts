@@ -36,6 +36,6 @@ export class SignUpComponent {
       this.userService.setUser(new User(-1, this.userForm.value.firstName, this.userForm.value.lastName, 
                               this.userForm.value.email, this.userForm.value.mobile));      
     }
-    this.router.navigate(['/traderservices']);
+    this.router.navigate(['/traderaboutyou']);
   }
 }
